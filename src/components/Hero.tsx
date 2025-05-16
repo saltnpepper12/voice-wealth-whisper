@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 
@@ -10,13 +11,6 @@ const Hero = () => {
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
           <div className="flex-1 max-w-2xl mx-auto lg:mx-0">
-            <div className="mb-6 flex justify-center lg:justify-start">
-              <img 
-                src="/lovable-uploads/1f93b3c6-76d7-42d2-9ead-e07ea3892eb8.png" 
-                alt="Incluya Logo" 
-                className="h-16 mb-4"
-              />
-            </div>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white drop-shadow-md">
               Reduce Financial Anxiety with 
               <span className="highlight-text"> Emotional Intelligence</span>
