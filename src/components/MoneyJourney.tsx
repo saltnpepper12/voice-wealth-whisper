@@ -19,7 +19,7 @@ const MoneyJourney = () => {
   ];
 
   return (
-    <section className="bg-data-artistic bg-cover bg-center bg-blend-soft-light py-20 relative">
+    <section className="bg-data-artistic bg-cover bg-center py-20 relative">
       {/* Overlay with reduced opacity */}
       <div className="absolute inset-0 bg-incluya-turquoise-dark/20"></div>
       
@@ -29,7 +29,7 @@ const MoneyJourney = () => {
         </h2>
         
         <div className="relative mx-auto max-w-md glass-panel p-8 overflow-hidden min-h-[500px] bg-white/20 backdrop-blur-sm border border-white/30 shadow-lg">
-          {/* Background elements */}
+          {/* Background elements - lowered z-index */}
           <div className="absolute bottom-0 right-0 w-full h-1/3 bg-incluya-yellow-dark/20 z-0"></div>
           
           <h3 className="font-serif text-2xl font-semibold mb-10 relative z-10 text-center text-white">Money Journey</h3>
@@ -51,9 +51,9 @@ const MoneyJourney = () => {
                 {/* Timeline dot */}
                 <div className="absolute left-1/2 top-0 transform -translate-x-1/2 timeline-dot"></div>
                 
-                {/* Leaves */}
+                {/* Leaves - adjusted z-index */}
                 <div 
-                  className="leaf w-14 h-10 absolute" 
+                  className="leaf w-14 h-10 absolute z-0" 
                   style={{ 
                     right: index % 2 ? "auto" : "-10px", 
                     left: index % 2 ? "-10px" : "auto",
@@ -61,9 +61,9 @@ const MoneyJourney = () => {
                   }}
                 ></div>
                 
-                {/* Text box */}
+                {/* Text box - ensure it's on top */}
                 <div 
-                  className={`bg-white/80 p-3 rounded-lg max-w-[160px] absolute top-0 ${
+                  className={`bg-white/80 p-3 rounded-lg max-w-[180px] absolute top-0 z-10 ${
                     index % 2 ? "left-auto right-12" : "right-auto left-12"
                   }`}
                 >
@@ -73,8 +73,8 @@ const MoneyJourney = () => {
             ))}
           </div>
           
-          {/* Bottom action icons */}
-          <div className="absolute bottom-4 left-0 right-0 flex justify-around pt-4 z-10">
+          {/* Bottom action icons - ensured they're on top */}
+          <div className="absolute bottom-4 left-0 right-0 flex justify-around pt-4 z-20">
             <button className="p-2 hover:bg-white/20 rounded-full transition-colors">
               <User size={20} className="text-white" />
             </button>

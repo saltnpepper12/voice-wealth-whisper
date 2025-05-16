@@ -10,8 +10,8 @@ const SelfCompassionQuote = () => {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="relative mx-auto max-w-md glass-panel p-8 bg-white/20 backdrop-blur-sm border border-white/30 shadow-lg">
-          {/* Top left squiggle */}
-          <div className="absolute -top-4 -left-4 w-20 h-20">
+          {/* Top left squiggle - adjusted positioning */}
+          <div className="absolute -top-4 -left-4 w-20 h-20 z-0">
             <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
               <path 
                 d="M10,30 Q30,5 50,30 T90,30" 
@@ -22,8 +22,8 @@ const SelfCompassionQuote = () => {
             </svg>
           </div>
           
-          {/* Bottom right blob */}
-          <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-white/30 rounded-full"></div>
+          {/* Bottom right blob - adjusted z-index */}
+          <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-white/30 rounded-full z-0"></div>
           
           <h3 className="font-serif text-2xl font-semibold mb-6 relative z-10 text-white">Self-Compassion</h3>
           
@@ -34,7 +34,7 @@ const SelfCompassionQuote = () => {
             <p className="font-medium text-white">- Sharon Salzberg</p>
           </div>
           
-          {/* Bottom action icons */}
+          {/* Bottom action icons - ensured they're on top */}
           <div className="flex justify-between mt-12 relative z-10">
             <button className="p-2 hover:bg-white/20 rounded-full transition-colors">
               <User size={20} className="text-white" />
