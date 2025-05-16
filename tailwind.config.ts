@@ -118,12 +118,7 @@ export default {
 			backgroundImage: {
 				'gradient-yellow': 'linear-gradient(135deg, #F8E9A1 0%, #F3D250 100%)',
 				'gradient-turquoise': 'linear-gradient(135deg, #A8E6CF 0%, #3AAFA9 100%)',
-				'login-pattern': 'url("/lovable-uploads/1f93b3c6-76d7-42d2-9ead-e07ea3892eb8.png"), linear-gradient(to right, #F8E9A1, #A8E6CF)',
-				'yellow-artistic': 'linear-gradient(rgba(243, 210, 80, 0.7), rgba(248, 233, 161, 0.7)), url("https://images.unsplash.com/photo-1500673922987-e212871fec22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80")',
-				'red-artistic': 'linear-gradient(rgba(255, 139, 148, 0.7), rgba(255, 211, 182, 0.7)), url("https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80")',
-				'data-artistic': 'linear-gradient(rgba(168, 230, 207, 0.7), rgba(58, 175, 169, 0.7)), url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80")',
-				'quote-artistic': 'linear-gradient(rgba(248, 233, 161, 0.6), rgba(243, 210, 80, 0.6)), url("https://images.unsplash.com/photo-1510797215324-95aa89f43c33?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80")',
-				'compassion-artistic': 'linear-gradient(rgba(255, 211, 182, 0.7), rgba(255, 139, 148, 0.7)), url("https://images.unsplash.com/photo-1446329813274-7c9036bd9a1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80")',
+				'login-pattern': 'url("/lovable-uploads/662645d6-8ae2-4099-a117-b86b743abb01.png")'
 			}
 		}
 	},

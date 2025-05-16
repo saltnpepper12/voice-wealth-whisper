@@ -26,16 +26,13 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section id="how-it-works" className="py-20 relative bg-red-artistic bg-cover bg-center bg-blend-soft-light">
-      {/* Overlay with reduced opacity */}
-      <div className="absolute inset-0 bg-incluya-text-dark/30"></div>
-      
-      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="how-it-works" className="py-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6 text-white">
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">
             How Incluya Works
           </h2>
-          <p className="text-lg text-white/90">
+          <p className="text-lg text-gray-700">
             Voice is the most natural way to share money stories, understand sentiments behind what is said, and build trust.
           </p>
         </div>
@@ -44,19 +41,23 @@ const HowItWorks = () => {
           {steps.map((step, index) => (
             <div key={index} className="relative">
               <div 
-                className="h-full p-6 rounded-xl bg-white/20 backdrop-blur-sm border border-white/30 shadow-md"
+                className={`h-full p-6 rounded-xl ${
+                  index % 2 === 0 
+                    ? "bg-incluya-turquoise/20" 
+                    : "bg-incluya-yellow/20"
+                }`}
               >
-                <span className="block font-serif text-4xl font-bold text-white opacity-50 mb-4">
+                <span className="block font-serif text-4xl font-bold text-incluya-text-dark opacity-20 mb-4">
                   {step.number}
                 </span>
-                <h3 className="font-serif text-xl font-semibold mb-3 text-white">{step.title}</h3>
-                <p className="text-white/90">{step.description}</p>
+                <h3 className="font-serif text-xl font-semibold mb-3">{step.title}</h3>
+                <p className="text-gray-700">{step.description}</p>
               </div>
               
               {index < steps.length - 1 && (
                 <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
               )}
