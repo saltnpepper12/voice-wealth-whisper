@@ -118,7 +118,10 @@ export default {
 			backgroundImage: {
 				'gradient-yellow': 'linear-gradient(135deg, #F8E9A1 0%, #F3D250 100%)',
 				'gradient-turquoise': 'linear-gradient(135deg, #A8E6CF 0%, #3AAFA9 100%)',
-				'login-pattern': 'url("/lovable-uploads/662645d6-8ae2-4099-a117-b86b743abb01.png")'
+				'login-pattern': 'url("/lovable-uploads/1f93b3c6-76d7-42d2-9ead-e07ea3892eb8.png")',
+				'yellow-artistic': 'url("/lovable-uploads/a65f97e7-b5e2-4c70-84a5-972c63ee925c.png")',
+				'red-artistic': 'url("/lovable-uploads/91ef27c1-1806-49d0-b284-b34ea705d7e2.png")',
+				'data-artistic': 'url("/lovable-uploads/6b9b154c-9ba3-4bff-90c4-c0044042bcb9.png")'
 			}
 		}
 	},

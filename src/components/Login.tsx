@@ -1,15 +1,22 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 
 const Login = () => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
   return (
     <section className="flex flex-col md:flex-row min-h-screen">
       <div className="flex-1 bg-login-pattern bg-cover bg-center flex flex-col justify-center items-center px-4 py-12">
         <div className="w-full max-w-md p-8 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg">
           <div className="text-center mb-8">
-            <h1 className="font-serif text-3xl font-bold mb-2">INCLUYA</h1>
+            <img 
+              src="/lovable-uploads/1f93b3c6-76d7-42d2-9ead-e07ea3892eb8.png" 
+              alt="Incluya Logo" 
+              className="h-12 mx-auto mb-4"
+            />
           </div>
           
           <form className="space-y-6">
@@ -20,6 +27,8 @@ const Login = () => {
               <Input
                 id="username"
                 type="text"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
                 placeholder="Enter your username"
                 className="w-full border-gray-300 focus:border-incluya-yellow-dark focus:ring focus:ring-incluya-yellow/30"
               />
@@ -37,6 +46,8 @@ const Login = () => {
               <Input
                 id="password"
                 type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 placeholder="Enter your password"
                 className="w-full border-gray-300 focus:border-incluya-yellow-dark focus:ring focus:ring-incluya-yellow/30"
               />

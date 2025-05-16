@@ -12,7 +12,7 @@ const FeatureCard = ({
   description: string 
 }) => {
   return (
-    <div className="bg-white p-6 rounded-xl shadow-sm border border-incluya-yellow/30 hover:shadow-md transition-all">
+    <div className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-sm border border-incluya-yellow/30 hover:shadow-md transition-all">
       <div className="rounded-full bg-incluya-yellow/20 w-12 h-12 flex items-center justify-center mb-4">
         <Icon className="w-6 h-6 text-incluya-yellow-dark" />
       </div>
@@ -47,8 +47,11 @@ const Features = () => {
   ];
 
   return (
-    <section id="features" className="py-20 bg-incluya-cream">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="features" className="py-20 bg-data-artistic bg-cover bg-center relative">
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-incluya-cream/80 backdrop-blur-[1px]"></div>
+      
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">
             Financial Wellness That Goes Beyond Numbers

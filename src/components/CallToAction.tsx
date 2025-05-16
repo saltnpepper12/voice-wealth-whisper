@@ -4,20 +4,18 @@ import { Button } from '@/components/ui/button';
 
 const CallToAction = () => {
   return (
-    <section className="py-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden bg-incluya-turquoise-dark rounded-2xl p-8 md:p-12">
-          {/* Decorative elements */}
-          <div 
-            className="absolute top-0 right-0 w-64 h-64 bg-incluya-yellow opacity-20 blob-shape" 
-            style={{ zIndex: 0 }}
-          ></div>
-          <div 
-            className="absolute left-0 bottom-0 w-48 h-48 bg-incluya-peach opacity-20 blob-shape" 
-            style={{ zIndex: 0 }}
-          ></div>
-          
+    <section className="py-20 bg-red-artistic bg-cover bg-center relative">
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-incluya-turquoise-dark/50 backdrop-blur-[1px]"></div>
+      
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative overflow-hidden rounded-2xl p-8 md:p-12 bg-white/10 backdrop-blur-md border border-white/30">
           <div className="relative z-10 max-w-3xl mx-auto text-center">
+            <img 
+              src="/lovable-uploads/1f93b3c6-76d7-42d2-9ead-e07ea3892eb8.png" 
+              alt="Incluya Logo" 
+              className="h-12 mx-auto mb-6"
+            />
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Relationship with Money?
             </h2>

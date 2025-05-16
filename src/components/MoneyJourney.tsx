@@ -19,17 +19,20 @@ const MoneyJourney = () => {
   ];
 
   return (
-    <section className="bg-incluya-turquoise/10 py-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="font-serif text-3xl md:text-4xl font-bold text-center mb-16">
+    <section className="bg-data-artistic bg-cover bg-center py-20 relative">
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-incluya-turquoise-dark/30 backdrop-blur-[1px]"></div>
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <h2 className="font-serif text-3xl md:text-4xl font-bold text-center mb-16 text-white">
           Visualize Your Money Journey
         </h2>
         
-        <div className="relative mx-auto max-w-md glass-panel p-8 overflow-hidden min-h-[500px]">
+        <div className="relative mx-auto max-w-md glass-panel p-8 overflow-hidden min-h-[500px] bg-white/20 backdrop-blur-md border border-white/30">
           {/* Background elements */}
           <div className="absolute bottom-0 right-0 w-full h-1/3 bg-incluya-yellow-dark/30 z-0"></div>
           
-          <h3 className="font-serif text-2xl font-semibold mb-10 relative z-10 text-center">Money Journey</h3>
+          <h3 className="font-serif text-2xl font-semibold mb-10 relative z-10 text-center text-white">Money Journey</h3>
           
           <div className="relative z-10">
             {/* Timeline stem */}
@@ -72,14 +75,14 @@ const MoneyJourney = () => {
           
           {/* Bottom action icons */}
           <div className="absolute bottom-4 left-0 right-0 flex justify-around pt-4 z-10">
-            <button className="p-2 hover:bg-incluya-turquoise/20 rounded-full transition-colors">
-              <User size={20} />
+            <button className="p-2 hover:bg-white/20 rounded-full transition-colors">
+              <User size={20} className="text-white" />
             </button>
-            <button className="p-2 hover:bg-incluya-turquoise/20 rounded-full transition-colors">
-              <Heart size={20} />
+            <button className="p-2 hover:bg-white/20 rounded-full transition-colors">
+              <Heart size={20} className="text-white" />
             </button>
-            <button className="p-2 hover:bg-incluya-turquoise/20 rounded-full transition-colors">
-              <Flag size={20} />
+            <button className="p-2 hover:bg-white/20 rounded-full transition-colors">
+              <Flag size={20} className="text-white" />
             </button>
           </div>
         </div>
