@@ -7,26 +7,39 @@ const VideoBackground = () => {
   useEffect(() => {
     // Autoplay the video when component mounts
     if (videoRef.current) {
-      videoRef.current.play().catch(error => {
-        console.error("Error playing the video:", error);
-      });
+      // Try to play the video with user interaction simulation
+      const playPromise = videoRef.current.play();
+      
+      if (playPromise !== undefined) {
+        playPromise.catch(error => {
+          console.error("Error playing the video:", error);
+          // If autoplay is prevented, we'll show a message in console
+          console.log("Video autoplay may be blocked by browser. User interaction might be required.");
+        });
+      }
     }
   }, []);
 
   return (
     <div className="fixed top-0 left-0 w-full h-full overflow-hidden z-[-1]">
-      <div className="absolute inset-0 bg-black/30 z-[1]"></div>
+      <div className="absolute inset-0 bg-black/40 z-[1]"></div>
       <video 
         ref={videoRef}
         autoPlay
         loop
         muted
         playsInline
+        preload="auto"
         className="absolute w-full h-full object-cover"
       >
+        {/* Using a more reliable video source */}
         <source 
-          src="https://cdn.gpteng.co/samples/nature-abstract.mp4" 
+          src="https://assets.mixkit.co/videos/preview/mixkit-waves-in-the-water-1164-large.mp4" 
           type="video/mp4" 
+        />
+        <source
+          src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+          type="video/mp4"
         />
         Your browser does not support the video tag.
       </video>
