@@ -3,7 +3,7 @@ import React from 'react';
 
 const Quote = () => {
   return (
-    <section className="relative py-20 bg-yellow-artistic bg-cover bg-center bg-blend-soft-light overflow-hidden">
+    <section className="relative py-20 bg-quote-artistic bg-cover bg-center overflow-hidden">
       {/* Overlay with reduced opacity */}
       <div className="absolute inset-0 bg-incluya-yellow-dark/20"></div>
       

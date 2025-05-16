@@ -4,7 +4,7 @@ import { User, Heart, Flag } from 'lucide-react';
 
 const SelfCompassionQuote = () => {
   return (
-    <section className="bg-red-artistic bg-cover bg-center bg-blend-soft-light py-20 relative">
+    <section className="bg-compassion-artistic bg-cover bg-center py-20 relative">
       {/* Overlay with reduced opacity */}
       <div className="absolute inset-0 bg-incluya-peach/30"></div>
       

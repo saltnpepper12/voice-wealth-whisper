@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 
 const CallToAction = () => {
   return (
-    <section className="py-20 bg-red-artistic bg-cover bg-center bg-blend-soft-light relative">
+    <section className="py-20 bg-red-artistic bg-cover bg-center relative">
       {/* Overlay with reduced opacity */}
       <div className="absolute inset-0 bg-incluya-turquoise-dark/30"></div>
       
