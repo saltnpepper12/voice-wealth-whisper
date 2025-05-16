@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,6 +19,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ["Inter", "sans-serif"],
+				serif: ["Playfair Display", "serif"],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,6 +66,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				incluya: {
+					yellow: "#F8E9A1",
+					"yellow-dark": "#F3D250",
+					turquoise: "#A8E6CF",
+					"turquoise-dark": "#3AAFA9",
+					peach: "#FFD3B6", 
+					coral: "#FF8B94",
+					cream: "#FEF9F2",
+					"text-dark": "#2D3436"
 				}
 			},
 			borderRadius: {
@@ -84,11 +99,26 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'fade-in': {
+					from: { opacity: '0', transform: 'translateY(10px)' },
+					to: { opacity: '1', transform: 'translateY(0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'fade-in': 'fade-in 0.7s ease-out forwards'
+			},
+			backgroundImage: {
+				'gradient-yellow': 'linear-gradient(135deg, #F8E9A1 0%, #F3D250 100%)',
+				'gradient-turquoise': 'linear-gradient(135deg, #A8E6CF 0%, #3AAFA9 100%)',
+				'login-pattern': 'url("/lovable-uploads/662645d6-8ae2-4099-a117-b86b743abb01.png")'
 			}
 		}
 	},
