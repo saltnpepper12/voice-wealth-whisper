@@ -4,12 +4,12 @@ import { Button } from '@/components/ui/button';
 
 const CallToAction = () => {
   return (
-    <section className="py-20 bg-red-artistic bg-cover bg-center relative">
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-incluya-turquoise-dark/50 backdrop-blur-[1px]"></div>
+    <section className="py-20 bg-red-artistic bg-cover bg-center bg-blend-soft-light relative">
+      {/* Overlay with reduced opacity */}
+      <div className="absolute inset-0 bg-incluya-turquoise-dark/30"></div>
       
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-2xl p-8 md:p-12 bg-white/10 backdrop-blur-md border border-white/30">
+        <div className="relative overflow-hidden rounded-2xl p-8 md:p-12 bg-white/10 backdrop-blur-sm border border-white/30 shadow-lg">
           <div className="relative z-10 max-w-3xl mx-auto text-center">
             <img 
               src="/lovable-uploads/1f93b3c6-76d7-42d2-9ead-e07ea3892eb8.png" 

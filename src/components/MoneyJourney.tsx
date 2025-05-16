@@ -19,18 +19,18 @@ const MoneyJourney = () => {
   ];
 
   return (
-    <section className="bg-data-artistic bg-cover bg-center py-20 relative">
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-incluya-turquoise-dark/30 backdrop-blur-[1px]"></div>
+    <section className="bg-data-artistic bg-cover bg-center bg-blend-soft-light py-20 relative">
+      {/* Overlay with reduced opacity */}
+      <div className="absolute inset-0 bg-incluya-turquoise-dark/20"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <h2 className="font-serif text-3xl md:text-4xl font-bold text-center mb-16 text-white">
           Visualize Your Money Journey
         </h2>
         
-        <div className="relative mx-auto max-w-md glass-panel p-8 overflow-hidden min-h-[500px] bg-white/20 backdrop-blur-md border border-white/30">
+        <div className="relative mx-auto max-w-md glass-panel p-8 overflow-hidden min-h-[500px] bg-white/20 backdrop-blur-sm border border-white/30 shadow-lg">
           {/* Background elements */}
-          <div className="absolute bottom-0 right-0 w-full h-1/3 bg-incluya-yellow-dark/30 z-0"></div>
+          <div className="absolute bottom-0 right-0 w-full h-1/3 bg-incluya-yellow-dark/20 z-0"></div>
           
           <h3 className="font-serif text-2xl font-semibold mb-10 relative z-10 text-center text-white">Money Journey</h3>
           

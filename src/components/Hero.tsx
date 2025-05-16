@@ -4,9 +4,9 @@ import { Button } from '@/components/ui/button';
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden py-20 lg:py-28 bg-yellow-artistic bg-cover bg-center">
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-incluya-yellow-dark/30 backdrop-blur-[2px]"></div>
+    <section className="relative overflow-hidden py-20 lg:py-28 bg-yellow-artistic bg-cover bg-center bg-blend-soft-light">
+      {/* Overlay with reduced opacity */}
+      <div className="absolute inset-0 bg-incluya-yellow-dark/20"></div>
       
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
@@ -46,7 +46,7 @@ const Hero = () => {
           
           <div className="flex-1 w-full max-w-md lg:max-w-none mx-auto">
             <div className="relative">
-              <div className="glass-panel p-6 rounded-3xl bg-white/30 backdrop-blur-md border border-white/50">
+              <div className="glass-panel p-6 rounded-3xl bg-white/30 backdrop-blur-sm border border-white/50 shadow-lg">
                 <h3 className="font-serif text-2xl font-semibold mb-4 text-center text-white">Money Journey</h3>
                 <div className="relative flex flex-col items-center py-6">
                   <div className="timeline-dot"></div>

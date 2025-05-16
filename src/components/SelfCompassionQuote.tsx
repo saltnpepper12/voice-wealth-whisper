@@ -4,12 +4,12 @@ import { User, Heart, Flag } from 'lucide-react';
 
 const SelfCompassionQuote = () => {
   return (
-    <section className="bg-red-artistic bg-cover bg-center py-20 relative">
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-incluya-peach/50 backdrop-blur-[1px]"></div>
+    <section className="bg-red-artistic bg-cover bg-center bg-blend-soft-light py-20 relative">
+      {/* Overlay with reduced opacity */}
+      <div className="absolute inset-0 bg-incluya-peach/30"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="relative mx-auto max-w-md glass-panel p-8 bg-white/20 backdrop-blur-md border border-white/30">
+        <div className="relative mx-auto max-w-md glass-panel p-8 bg-white/20 backdrop-blur-sm border border-white/30 shadow-lg">
           {/* Top left squiggle */}
           <div className="absolute -top-4 -left-4 w-20 h-20">
             <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">

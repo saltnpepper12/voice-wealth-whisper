@@ -26,9 +26,9 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section id="how-it-works" className="py-20 relative bg-red-artistic bg-cover bg-fixed">
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-incluya-text-dark/50 backdrop-blur-[1px]"></div>
+    <section id="how-it-works" className="py-20 relative bg-red-artistic bg-cover bg-center bg-blend-soft-light">
+      {/* Overlay with reduced opacity */}
+      <div className="absolute inset-0 bg-incluya-text-dark/30"></div>
       
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -44,7 +44,7 @@ const HowItWorks = () => {
           {steps.map((step, index) => (
             <div key={index} className="relative">
               <div 
-                className="h-full p-6 rounded-xl bg-white/20 backdrop-blur-md border border-white/30"
+                className="h-full p-6 rounded-xl bg-white/20 backdrop-blur-sm border border-white/30 shadow-md"
               >
                 <span className="block font-serif text-4xl font-bold text-white opacity-50 mb-4">
                   {step.number}

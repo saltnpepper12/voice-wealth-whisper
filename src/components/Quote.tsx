@@ -3,9 +3,9 @@ import React from 'react';
 
 const Quote = () => {
   return (
-    <section className="relative py-20 bg-yellow-artistic bg-cover bg-center overflow-hidden">
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-incluya-yellow-dark/30 backdrop-blur-[2px]"></div>
+    <section className="relative py-20 bg-yellow-artistic bg-cover bg-center bg-blend-soft-light overflow-hidden">
+      {/* Overlay with reduced opacity */}
+      <div className="absolute inset-0 bg-incluya-yellow-dark/20"></div>
       
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">

@@ -118,10 +118,10 @@ export default {
 			backgroundImage: {
 				'gradient-yellow': 'linear-gradient(135deg, #F8E9A1 0%, #F3D250 100%)',
 				'gradient-turquoise': 'linear-gradient(135deg, #A8E6CF 0%, #3AAFA9 100%)',
-				'login-pattern': 'url("/lovable-uploads/1f93b3c6-76d7-42d2-9ead-e07ea3892eb8.png")',
-				'yellow-artistic': 'url("/lovable-uploads/a65f97e7-b5e2-4c70-84a5-972c63ee925c.png")',
-				'red-artistic': 'url("/lovable-uploads/91ef27c1-1806-49d0-b284-b34ea705d7e2.png")',
-				'data-artistic': 'url("/lovable-uploads/6b9b154c-9ba3-4bff-90c4-c0044042bcb9.png")'
+				'login-pattern': 'url("/lovable-uploads/1f93b3c6-76d7-42d2-9ead-e07ea3892eb8.png"), linear-gradient(to right, #F8E9A1, #A8E6CF)',
+				'yellow-artistic': 'url("/lovable-uploads/a65f97e7-b5e2-4c70-84a5-972c63ee925c.png"), linear-gradient(to right, rgba(243, 210, 80, 0.7), rgba(248, 233, 161, 0.7))',
+				'red-artistic': 'url("/lovable-uploads/91ef27c1-1806-49d0-b284-b34ea705d7e2.png"), linear-gradient(to right, rgba(255, 139, 148, 0.7), rgba(255, 211, 182, 0.7))',
+				'data-artistic': 'url("/lovable-uploads/6b9b154c-9ba3-4bff-90c4-c0044042bcb9.png"), linear-gradient(to right, rgba(168, 230, 207, 0.7), rgba(58, 175, 169, 0.7))'
 			}
 		}
 	},
