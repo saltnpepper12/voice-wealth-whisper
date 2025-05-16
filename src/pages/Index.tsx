@@ -10,10 +10,12 @@ import CallToAction from '@/components/CallToAction';
 import Footer from '@/components/Footer';
 import SelfCompassionQuote from '@/components/SelfCompassionQuote';
 import MoneyJourney from '@/components/MoneyJourney';
+import VideoBackground from '@/components/VideoBackground';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background font-sans">
+    <div className="min-h-screen bg-transparent font-sans relative">
+      <VideoBackground />
       <Navbar />
       <Hero />
       <Features />

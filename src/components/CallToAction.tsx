@@ -4,9 +4,9 @@ import { Button } from '@/components/ui/button';
 
 const CallToAction = () => {
   return (
-    <section className="py-20">
+    <section className="py-20 relative z-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden bg-incluya-turquoise-dark rounded-2xl p-8 md:p-12">
+        <div className="relative overflow-hidden bg-incluya-turquoise-dark/90 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/20 shadow-xl">
           {/* Decorative elements */}
           <div 
             className="absolute top-0 right-0 w-64 h-64 bg-incluya-yellow opacity-20 blob-shape" 
