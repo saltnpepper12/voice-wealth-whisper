@@ -11,7 +11,11 @@ const Navbar = () => {
     <nav className="w-full py-4 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2">
-          <span className="text-2xl font-serif font-semibold text-incluya-text-dark">INCLUYA</span>
+          <img 
+            src="/lovable-uploads/16e03b5f-f6a0-4635-af4f-01aa2697ad0e.png" 
+            alt="Incluya Logo" 
+            className="h-10 w-auto" 
+          />
         </Link>
 
         {/* Desktop Navigation */}

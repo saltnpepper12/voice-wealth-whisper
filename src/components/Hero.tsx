@@ -18,6 +18,13 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
           <div className="flex-1 max-w-2xl mx-auto lg:mx-0">
+            <div className="flex items-center justify-center lg:justify-start mb-6">
+              <img 
+                src="/lovable-uploads/16e03b5f-f6a0-4635-af4f-01aa2697ad0e.png" 
+                alt="Incluya Logo" 
+                className="h-16 w-auto" 
+              />
+            </div>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
               Reduce Financial Anxiety with 
               <span className="highlight-text"> Emotional Intelligence</span>

@@ -9,7 +9,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <span className="text-xl font-serif font-semibold text-incluya-text-dark">INCLUYA</span>
+              <img 
+                src="/lovable-uploads/16e03b5f-f6a0-4635-af4f-01aa2697ad0e.png" 
+                alt="Incluya Logo" 
+                className="h-12 w-auto" 
+              />
             </Link>
             <p className="text-gray-600 mb-4">
               Emotionally intelligent AI to reduce financial anxiety.
