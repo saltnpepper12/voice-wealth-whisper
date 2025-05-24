@@ -8,7 +8,7 @@ const Hero = () => {
       <VideoBackground />
       
       <div className="relative z-10">
-        <div className="bg-black/30 backdrop-blur-sm border border-white/20 rounded-2xl px-12 py-8 mx-4 shadow-2xl">
+        <div className="glass-panel px-12 py-8 mx-4">
           <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl font-bold text-white drop-shadow-2xl tracking-wider opacity-0 animate-[fade-in_1.5s_ease-out_0.8s_forwards]">
             <span className="inline-block animate-pulse bg-gradient-to-r from-white via-incluya-yellow to-white bg-clip-text text-transparent bg-300% animate-[shimmer_3s_ease-in-out_infinite]">
               Incluya
