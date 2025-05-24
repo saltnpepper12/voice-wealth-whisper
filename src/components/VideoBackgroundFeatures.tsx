@@ -32,8 +32,12 @@ const VideoBackgroundFeatures = () => {
         className="absolute w-full h-full object-cover"
       >
         <source 
-          src="https://raw.githubusercontent.com/videos/blob/main/test11%20(1)%20(1).mp4" 
+          src="https://assets.mixkit.co/videos/preview/mixkit-waves-in-the-water-1164-large.mp4" 
           type="video/mp4" 
+        />
+        <source
+          src="https://raw.githubusercontent.com/saltnpepper12/videos/main/video_preview_h264.mp4"
+          type="video/mp4"
         />
         Your browser does not support the video tag.
       </video>
