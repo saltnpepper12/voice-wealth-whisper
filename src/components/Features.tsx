@@ -48,8 +48,8 @@ const Features = () => {
 
   return (
     <section id="features" className="py-20 bg-incluya-cream relative overflow-hidden">
-      {/* Artistic image positioned on the left */}
-      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 z-0">
+      {/* Artistic image positioned in the center */}
+      <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0">
         <img 
           src="/lovable-uploads/f04a7553-035c-43a1-ba8e-43d92ae3d2ac.png" 
           alt="Artistic profile illustration"
