@@ -22,7 +22,7 @@ const VideoBackground = () => {
 
   return (
     <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-[-1]">
-      <div className="absolute inset-0 bg-black/10 z-[1]"></div>
+      <div className="absolute inset-0 bg-black/5 z-[1]"></div>
       <video 
         ref={videoRef}
         autoPlay
@@ -41,7 +41,7 @@ const VideoBackground = () => {
           type="video/mp4"
         />
         Your browser does not support the video tag.
-      </source>
+      </video>
     </div>
   );
 };
