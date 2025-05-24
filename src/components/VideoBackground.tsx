@@ -32,7 +32,7 @@ const VideoBackground = () => {
         className="absolute w-full h-full object-cover"
       >
         <source 
-          src="https://raw.githubusercontent.com/videos/blob/main/test11%20(1)%20(1).mp4" 
+          src="https://raw.githubusercontent.com/saltnpepper12/videos/main/video_preview_h264.mp4" 
           type="video/mp4" 
         />
         <source
