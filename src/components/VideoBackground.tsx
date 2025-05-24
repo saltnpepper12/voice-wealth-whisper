@@ -22,7 +22,7 @@ const VideoBackground = () => {
 
   return (
     <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-[-1]">
-      <div className="absolute inset-0 bg-black/30 z-[1]"></div>
+      <div className="absolute inset-0 bg-black/10 z-[1]"></div>
       <video 
         ref={videoRef}
         autoPlay
@@ -32,18 +32,16 @@ const VideoBackground = () => {
         preload="auto"
         className="absolute w-full h-full object-cover"
       >
-        {/* Using your GitHub video */}
         <source 
           src="https://raw.githubusercontent.com/saltnpepper12/videos/main/video_preview_h264.mp4" 
           type="video/mp4" 
         />
-        {/* Fallback video */}
         <source
           src="https://assets.mixkit.co/videos/preview/mixkit-waves-in-the-water-1164-large.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.
-      </video>
+      </source>
     </div>
   );
 };

@@ -6,7 +6,7 @@ const CallToAction = () => {
   return (
     <section className="py-20 relative z-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden bg-incluya-turquoise-dark/90 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/20 shadow-xl">
+        <div className="relative overflow-hidden bg-incluya-turquoise-dark rounded-2xl p-8 md:p-12 shadow-xl">
           {/* Decorative elements */}
           <div 
             className="absolute top-0 right-0 w-64 h-64 bg-incluya-yellow opacity-20 blob-shape" 
@@ -21,14 +21,14 @@ const CallToAction = () => {
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Relationship with Money?
             </h2>
-            <p className="text-lg text-white/90 mb-8 max-w-lg mx-auto">
+            <p className="text-lg text-white mb-8 max-w-lg mx-auto">
               Join thousands who are using Incluya to reduce financial anxiety and build healthier money relationships.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button className="bg-incluya-yellow-dark hover:bg-incluya-yellow text-incluya-text-dark text-lg py-6 px-8">
                 Get Started Free
               </Button>
-              <Button variant="outline" className="bg-transparent border-white text-white hover:bg-white/10 text-lg py-6 px-8">
+              <Button variant="outline" className="bg-white border-white text-incluya-text-dark hover:bg-gray-100 text-lg py-6 px-8">
                 Book a Demo
               </Button>
             </div>
