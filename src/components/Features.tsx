@@ -47,8 +47,17 @@ const Features = () => {
   ];
 
   return (
-    <section id="features" className="py-20 bg-incluya-cream">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="features" className="py-20 bg-incluya-cream relative overflow-hidden">
+      {/* Artistic image positioned on the left */}
+      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 z-0">
+        <img 
+          src="/lovable-uploads/f04a7553-035c-43a1-ba8e-43d92ae3d2ac.png" 
+          alt="Artistic profile illustration"
+          className="opacity-20"
+        />
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">
             Financial Wellness That Goes Beyond Numbers
