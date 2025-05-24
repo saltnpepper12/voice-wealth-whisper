@@ -33,7 +33,7 @@ const Hero = () => {
               <Button className="bg-incluya-yellow-dark hover:bg-incluya-yellow text-incluya-text-dark text-lg py-6 px-8">
                 Get Started Free
               </Button>
-              <Button variant="outline" className="bg-white/90 border-white text-incluya-text-dark hover:bg-white text-lg py-6 px-8">
+              <Button variant="outline" className="bg-transparent border-white text-white hover:bg-white/10 text-lg py-6 px-8">
                 How It Works
               </Button>
             </div>
@@ -49,8 +49,8 @@ const Hero = () => {
           
           <div className="flex-1 w-full max-w-md lg:max-w-none mx-auto">
             <div className="relative">
-              <div className="bg-white/95 backdrop-blur-sm p-6 rounded-3xl border border-gray-200 shadow-lg">
-                <h3 className="font-serif text-2xl font-semibold mb-4 text-center text-incluya-text-dark">Money Journey</h3>
+              <div className="bg-transparent backdrop-blur-sm p-6 rounded-3xl">
+                <h3 className="font-serif text-2xl font-semibold mb-4 text-center text-white drop-shadow-lg">Money Journey</h3>
                 <div className="relative flex flex-col items-center py-6">
                   <div className="timeline-dot"></div>
                   <div className="timeline-stem h-16"></div>
@@ -64,13 +64,13 @@ const Hero = () => {
                   <div className="leaf w-14 h-10 -right-6 bottom-20"></div>
                   
                   {/* Journey Items */}
-                  <div className="absolute left-16 top-4 max-w-[180px] bg-white p-2 rounded-lg text-sm text-gray-800 shadow-sm">
+                  <div className="absolute left-16 top-4 max-w-[180px] bg-white/20 backdrop-blur-sm p-2 rounded-lg text-sm text-white shadow-sm">
                     Changed my career to earn more money
                   </div>
-                  <div className="absolute right-16 top-28 max-w-[180px] bg-white p-2 rounded-lg text-sm text-gray-800 shadow-sm">
+                  <div className="absolute right-16 top-28 max-w-[180px] bg-white/20 backdrop-blur-sm p-2 rounded-lg text-sm text-white shadow-sm">
                     Increased my confidence and learned how to save
                   </div>
-                  <div className="absolute left-16 bottom-4 max-w-[180px] bg-white p-2 rounded-lg text-sm text-gray-800 shadow-sm">
+                  <div className="absolute left-16 bottom-4 max-w-[180px] bg-white/20 backdrop-blur-sm p-2 rounded-lg text-sm text-white shadow-sm">
                     Learned the source of my financial anxiety
                   </div>
                 </div>

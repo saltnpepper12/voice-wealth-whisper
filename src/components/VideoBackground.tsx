@@ -22,7 +22,6 @@ const VideoBackground = () => {
 
   return (
     <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-[-1]">
-      <div className="absolute inset-0 bg-black/5 z-[1]"></div>
       <video 
         ref={videoRef}
         autoPlay
