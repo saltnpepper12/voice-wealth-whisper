@@ -7,8 +7,8 @@ const Hero = () => {
     <section className="relative overflow-hidden min-h-screen flex items-center justify-center">
       <VideoBackground />
       
-      <div className="relative z-10 text-center">
-        <div className="glass-panel px-12 py-8 mx-4 mb-8">
+      <div className="relative z-10 text-center mt-16">
+        <div className="bg-slate-800/60 backdrop-blur-sm border-2 border-incluya-turquoise-dark px-12 py-8 mx-4 mb-8 rounded-lg">
           <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl font-bold text-white drop-shadow-2xl tracking-wider opacity-0 animate-[fade-in_1.5s_ease-out_0.8s_forwards]">
             <span className="inline-block animate-pulse bg-gradient-to-r from-white via-incluya-yellow to-white bg-clip-text text-transparent bg-300% animate-[shimmer_3s_ease-in-out_infinite]">
               Incluya
