@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -107,18 +106,26 @@ export default {
 				'fade-in': {
 					from: { opacity: '0', transform: 'translateY(10px)' },
 					to: { opacity: '1', transform: 'translateY(0)' }
+				},
+				'shimmer': {
+					'0%': { backgroundPosition: '200% 0' },
+					'100%': { backgroundPosition: '-200% 0' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'float': 'float 6s ease-in-out infinite',
-				'fade-in': 'fade-in 0.7s ease-out forwards'
+				'fade-in': 'fade-in 0.7s ease-out forwards',
+				'shimmer': 'shimmer 3s ease-in-out infinite'
 			},
 			backgroundImage: {
 				'gradient-yellow': 'linear-gradient(135deg, #F8E9A1 0%, #F3D250 100%)',
 				'gradient-turquoise': 'linear-gradient(135deg, #A8E6CF 0%, #3AAFA9 100%)',
 				'login-pattern': 'url("/lovable-uploads/662645d6-8ae2-4099-a117-b86b743abb01.png")'
+			},
+			backgroundSize: {
+				'300%': '300%'
 			}
 		}
 	},

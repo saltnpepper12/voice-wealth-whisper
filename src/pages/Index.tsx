@@ -14,8 +14,8 @@ import MoneyJourney from '@/components/MoneyJourney';
 const Index = () => {
   return (
     <div className="min-h-screen bg-transparent font-sans">
-      <Navbar />
       <Hero />
+      <Navbar />
       <Features />
       <HowItWorks />
       <Quote />
