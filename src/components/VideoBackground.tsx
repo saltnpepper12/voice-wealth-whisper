@@ -30,9 +30,12 @@ const VideoBackground = () => {
         playsInline
         preload="auto"
         className="absolute w-full h-full object-cover"
+        onError={(e) => console.error("Video failed to load:", e)}
+        onLoadStart={() => console.log("Video started loading")}
+        onLoadedData={() => console.log("Video data loaded")}
       >
         <source 
-          src="https://raw.githubusercontent.com/saltnpepper12/videos/blob/main/test11-cave.mp4" 
+          src="https://raw.githubusercontent.com/saltnpepper12/videos/main/test11-cave.mp4" 
           type="video/mp4" 
         />
         <source
