@@ -7,8 +7,8 @@ const Hero = () => {
     <section className="relative overflow-hidden min-h-screen flex items-center justify-center">
       <VideoBackground />
       
-      <div className="relative z-10 text-center mt-16">
-        <div className="bg-slate-800/60 backdrop-blur-sm border-2 border-incluya-turquoise-dark px-12 py-8 mx-4 mb-8 rounded-lg">
+      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+        <div className="mb-12">
           <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl font-bold text-white drop-shadow-2xl tracking-wider opacity-0 animate-[fade-in_1.5s_ease-out_0.8s_forwards]">
             <span className="inline-block animate-pulse bg-gradient-to-r from-white via-incluya-yellow to-white bg-clip-text text-transparent bg-300% animate-[shimmer_3s_ease-in-out_infinite]">
               Incluya
@@ -16,8 +16,8 @@ const Hero = () => {
           </h1>
         </div>
         
-        <div className="mx-4 opacity-0 animate-[fade-in_1.2s_ease-out_2.5s_forwards]">
-          <p className="text-white text-lg md:text-xl lg:text-2xl font-light leading-relaxed drop-shadow-lg max-w-2xl mx-auto">
+        <div className="opacity-0 animate-[fade-in_1.2s_ease-out_2.5s_forwards]">
+          <p className="text-white text-lg md:text-xl lg:text-2xl font-light leading-relaxed drop-shadow-lg max-w-3xl mx-auto bg-black/20 backdrop-blur-sm rounded-lg px-8 py-6">
             "Embrace your journey with compassion, nurture your growth with wisdom, and discover the abundance that flows from within."
           </p>
         </div>
