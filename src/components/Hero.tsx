@@ -8,9 +8,9 @@ const Hero = () => {
       <VideoBackground />
       
       <div className="relative z-10 w-full h-screen flex flex-col justify-center items-center px-6 py-16">
-        <div className="text-center mb-4 w-full overflow-visible">
-          <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl xl:text-[10rem] font-light text-white drop-shadow-2xl tracking-wide opacity-0 animate-[fade-in_1.5s_ease-out_0.8s_forwards,breathe_6s_ease-in-out_3s_infinite] mb-2 leading-none overflow-visible py-8">
-            <span className="inline-block bg-gradient-to-r from-white via-incluya-yellow to-white bg-clip-text text-transparent bg-300% animate-[shimmer_3s_ease-in-out_infinite] overflow-visible">
+        <div className="text-center mb-4">
+          <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl xl:text-[10rem] font-light text-white drop-shadow-2xl tracking-wide opacity-0 animate-[fade-in_1.5s_ease-out_0.8s_forwards,breathe_6s_ease-in-out_3s_infinite] mb-2 leading-[0.9] overflow-visible pb-4">
+            <span className="inline-block bg-gradient-to-r from-white via-incluya-yellow to-white bg-clip-text text-transparent bg-300% animate-[shimmer_3s_ease-in-out_infinite]">
               Incluya
             </span>
           </h1>
