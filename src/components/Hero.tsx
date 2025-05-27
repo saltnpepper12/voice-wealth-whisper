@@ -7,17 +7,17 @@ const Hero = () => {
     <section className="relative overflow-hidden min-h-screen flex items-center justify-center">
       <VideoBackground />
       
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <div className="mb-12">
-          <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl font-bold text-white drop-shadow-2xl tracking-wider opacity-0 animate-[fade-in_1.5s_ease-out_0.8s_forwards]">
-            <span className="inline-block animate-pulse bg-gradient-to-r from-white via-incluya-yellow to-white bg-clip-text text-transparent bg-300% animate-[shimmer_3s_ease-in-out_infinite]">
+      <div className="relative z-10 w-full h-screen flex flex-col justify-center items-center px-6">
+        <div className="text-center mb-16">
+          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white drop-shadow-2xl tracking-wide opacity-0 animate-[fade-in_1.5s_ease-out_0.8s_forwards] mb-8">
+            <span className="inline-block bg-gradient-to-r from-white via-incluya-yellow to-white bg-clip-text text-transparent bg-300% animate-[shimmer_3s_ease-in-out_infinite]">
               Incluya
             </span>
           </h1>
         </div>
         
-        <div className="opacity-0 animate-[fade-in_1.2s_ease-out_2.5s_forwards]">
-          <p className="text-white text-lg md:text-xl lg:text-2xl font-light leading-relaxed drop-shadow-lg max-w-3xl mx-auto bg-black/20 backdrop-blur-sm rounded-lg px-8 py-6">
+        <div className="text-center max-w-4xl opacity-0 animate-[fade-in_1.2s_ease-out_2.5s_forwards]">
+          <p className="text-white text-xl md:text-2xl lg:text-3xl font-light leading-relaxed drop-shadow-xl tracking-wide">
             "Embrace your journey with compassion, nurture your growth with wisdom, and discover the abundance that flows from within."
           </p>
         </div>
