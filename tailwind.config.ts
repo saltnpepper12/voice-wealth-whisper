@@ -110,6 +110,26 @@ export default {
 				'shimmer': {
 					'0%': { backgroundPosition: '200% 0' },
 					'100%': { backgroundPosition: '-200% 0' }
+				},
+				'breathe': {
+					'0%, 100%': { 
+						transform: 'scale(1)', 
+						opacity: '1' 
+					},
+					'50%': { 
+						transform: 'scale(1.02)', 
+						opacity: '0.95' 
+					}
+				},
+				'gentle-pulse': {
+					'0%, 100%': { 
+						opacity: '1',
+						transform: 'scale(1)'
+					},
+					'50%': { 
+						opacity: '0.92',
+						transform: 'scale(1.01)'
+					}
 				}
 			},
 			animation: {
@@ -117,7 +137,9 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'float': 'float 6s ease-in-out infinite',
 				'fade-in': 'fade-in 0.7s ease-out forwards',
-				'shimmer': 'shimmer 3s ease-in-out infinite'
+				'shimmer': 'shimmer 3s ease-in-out infinite',
+				'breathe': 'breathe 6s ease-in-out infinite',
+				'gentle-pulse': 'gentle-pulse 8s ease-in-out infinite'
 			},
 			backgroundImage: {
 				'gradient-yellow': 'linear-gradient(135deg, #F8E9A1 0%, #F3D250 100%)',
