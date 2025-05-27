@@ -17,7 +17,7 @@ const Hero = () => {
         </div>
         
         <div className="text-center max-w-3xl opacity-0 animate-[fade-in_1.2s_ease-out_2.5s_forwards,gentle-pulse_8s_ease-in-out_4s_infinite]">
-          <p className="text-white text-sm md:text-base lg:text-lg font-light leading-relaxed drop-shadow-lg tracking-wide opacity-80">
+          <p className="text-white text-lg md:text-xl lg:text-2xl font-light leading-relaxed drop-shadow-lg tracking-wide opacity-80">
             "Embrace your journey with compassion, nurture your growth with wisdom, and discover the abundance that flows from within."
           </p>
         </div>
