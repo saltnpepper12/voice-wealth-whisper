@@ -16,7 +16,7 @@ const Hero = () => {
       
       <div className="relative z-10 w-full h-screen flex flex-col justify-center items-center px-6 py-16">
         <div className="text-center mb-2">
-          <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl xl:text-[10rem] font-light text-white drop-shadow-2xl tracking-wide opacity-0 animate-[fade-in_1.5s_ease-out_0.8s_forwards,breathe_6s_ease-in-out_3s_infinite] mb-2 leading-[0.85] py-4">
+          <h1 className="font-sans text-6xl md:text-8xl lg:text-9xl xl:text-[10rem] font-light text-white drop-shadow-2xl tracking-wide opacity-0 animate-[fade-in_1.5s_ease-out_0.8s_forwards,breathe_6s_ease-in-out_3s_infinite] mb-2 leading-[0.85] py-4">
             <span className="inline-block text-incluya-yellow animate-[shimmer_3s_ease-in-out_infinite]">
               Incluya
             </span>

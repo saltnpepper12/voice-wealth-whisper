@@ -38,19 +38,19 @@ const Welcome = () => {
       <div className="relative z-10 w-full max-w-4xl px-6 sm:px-8 md:px-10 text-center">
         {/* Animated Welcome Text */}
         <div className="mb-20">
-          <h1 className="font-serif text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] xl:text-[12rem] font-light text-white tracking-[0.02em] mb-12 leading-[0.85] uppercase opacity-0 animate-[fade-in_2s_ease-out_0.5s_forwards]">
+          <h1 className="font-sans text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] xl:text-[12rem] font-light text-white tracking-[0.02em] mb-12 leading-[0.85] uppercase opacity-0 animate-[fade-in_2s_ease-out_0.5s_forwards]">
             Welcome
           </h1>
           
           {/* Main Message */}
-          <p className="text-white/90 text-lg sm:text-xl md:text-2xl font-serif leading-relaxed mb-16 opacity-0 animate-[fade-in_1.5s_ease-out_1.5s_forwards] px-4 sm:px-8 drop-shadow-md">
+          <p className="text-white/90 text-lg sm:text-xl md:text-2xl font-sans leading-relaxed mb-16 opacity-0 animate-[fade-in_1.5s_ease-out_1.5s_forwards] px-4 sm:px-8 drop-shadow-md">
             When you're ready, we'll begin exploring the depths of your inner world together.
           </p>
         </div>
 
         {/* Simple Call to Action */}
         <div className="opacity-0 animate-[fade-in_1.5s_ease-out_2.5s_forwards]">
-          <p className="text-white/70 text-lg sm:text-xl md:text-2xl font-serif font-light tracking-wide">
+          <p className="text-white/70 text-lg sm:text-xl md:text-2xl font-sans font-light tracking-wide">
             Click anywhere to continue
           </p>
         </div>
