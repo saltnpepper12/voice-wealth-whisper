@@ -4,12 +4,12 @@ import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
-import { Card, CardContent } from '@/components/ui/card';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const IntakeQuestions = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const questions = [
     {
@@ -85,13 +85,21 @@ const IntakeQuestions = () => {
 
   const handleNext = () => {
     if (currentQuestion < questions.length - 1) {
-      setCurrentQuestion(currentQuestion + 1);
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setCurrentQuestion(currentQuestion + 1);
+        setIsTransitioning(false);
+      }, 300);
     }
   };
 
   const handlePrevious = () => {
     if (currentQuestion > 0) {
-      setCurrentQuestion(currentQuestion - 1);
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setCurrentQuestion(currentQuestion - 1);
+        setIsTransitioning(false);
+      }, 300);
     }
   };
 
@@ -121,115 +129,115 @@ const IntakeQuestions = () => {
           />
           Your browser does not support the video tag.
         </video>
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 w-full max-w-4xl px-6 py-16">
         {/* Progress Bar */}
-        <div className="mb-8">
-          <div className="w-full bg-white/20 rounded-full h-2 backdrop-blur-sm">
+        <div className="mb-12">
+          <div className="w-full bg-white/20 rounded-full h-1 backdrop-blur-sm">
             <div 
-              className="bg-incluya-yellow h-2 rounded-full transition-all duration-500 ease-in-out"
+              className="bg-incluya-yellow h-1 rounded-full transition-all duration-700 ease-out"
               style={{ width: `${progress}%` }}
             ></div>
           </div>
-          <p className="text-white/80 text-sm mt-2 font-sans">
+          <p className="text-white/70 text-sm mt-3 font-sans text-center">
             Question {currentQuestion + 1} of {questions.length}
           </p>
         </div>
 
-        {/* Question Card */}
-        <Card className="bg-white/10 backdrop-blur-md border border-white/20 shadow-2xl">
-          <CardContent className="p-8 md:p-12">
-            <div className="space-y-8">
-              {/* Question Title */}
-              <div className="text-center space-y-4">
-                <h2 className="font-sans text-2xl md:text-3xl lg:text-4xl font-light text-white leading-relaxed">
-                  {currentQ.question}
-                </h2>
-                {currentQ.subtext && (
-                  <p className="text-white/70 text-lg font-sans">
-                    {currentQ.subtext}
-                  </p>
-                )}
-              </div>
+        {/* Question Content */}
+        <div className={`transition-all duration-500 ease-in-out ${isTransitioning ? 'opacity-0 transform translate-y-8' : 'opacity-100 transform translate-y-0'}`}>
+          <div className="space-y-12">
+            {/* Question Title */}
+            <div className="text-center space-y-6">
+              <h2 className="font-sans text-3xl md:text-4xl lg:text-5xl font-light text-white leading-relaxed drop-shadow-lg">
+                {currentQ.question}
+              </h2>
+              {currentQ.subtext && (
+                <p className="text-white/80 text-xl font-sans drop-shadow-md">
+                  {currentQ.subtext}
+                </p>
+              )}
+            </div>
 
-              {/* Answer Section */}
-              <div className="space-y-6">
-                {currentQ.type === 'textarea' ? (
+            {/* Answer Section */}
+            <div className="space-y-8">
+              {currentQ.type === 'textarea' ? (
+                <div className="max-w-2xl mx-auto">
                   <Textarea
                     placeholder={currentQ.placeholder}
                     value={answers[currentQ.id] || ''}
                     onChange={(e) => handleAnswerChange(currentQ.id, e.target.value)}
-                    className="min-h-[120px] bg-white/20 border-white/30 text-white placeholder:text-white/50 backdrop-blur-sm text-lg font-sans resize-none"
+                    className="min-h-[140px] bg-white/15 border-white/20 text-white placeholder:text-white/60 backdrop-blur-md text-lg font-sans resize-none focus:border-white/40 focus:bg-white/20 transition-all duration-300"
                   />
-                ) : (
-                  <div className="space-y-6">
-                    {currentQ.subQuestions?.map((subQuestion, index) => (
-                      <div key={index} className="space-y-3">
-                        <p className="text-white/90 text-lg font-sans leading-relaxed">
-                          {index + 1}. {subQuestion}
-                        </p>
-                        <RadioGroup
-                          value={answers[`${currentQ.id}_${index}`] || ''}
-                          onValueChange={(value) => handleAnswerChange(currentQ.id, value, index)}
-                          className="flex space-x-6 justify-center"
-                        >
-                          {[1, 2, 3, 4, 5].map((num) => (
-                            <div key={num} className="flex items-center space-x-2">
-                              <RadioGroupItem 
-                                value={num.toString()} 
-                                id={`${currentQ.id}_${index}_${num}`}
-                                className="border-white/50 text-white data-[state=checked]:bg-incluya-yellow data-[state=checked]:border-incluya-yellow"
-                              />
-                              <Label 
-                                htmlFor={`${currentQ.id}_${index}_${num}`}
-                                className="text-white/80 font-sans cursor-pointer hover:text-white transition-colors"
-                              >
-                                {num}
-                              </Label>
-                            </div>
-                          ))}
-                        </RadioGroup>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              {/* Navigation */}
-              <div className="flex justify-between items-center pt-8">
-                <Button
-                  onClick={handlePrevious}
-                  disabled={currentQuestion === 0}
-                  variant="ghost"
-                  className="text-white/80 hover:text-white hover:bg-white/10 font-sans disabled:opacity-30"
-                >
-                  <ChevronLeft className="w-5 h-5 mr-2" />
-                  Previous
-                </Button>
-
-                {currentQuestion === questions.length - 1 ? (
-                  <Button
-                    onClick={handleSubmit}
-                    className="bg-incluya-yellow hover:bg-incluya-yellow-dark text-incluya-text-dark font-sans px-8 py-3 text-lg"
-                  >
-                    Complete Journey
-                  </Button>
-                ) : (
-                  <Button
-                    onClick={handleNext}
-                    className="bg-incluya-yellow hover:bg-incluya-yellow-dark text-incluya-text-dark font-sans px-8 py-3 text-lg"
-                  >
-                    Next
-                    <ChevronRight className="w-5 h-5 ml-2" />
-                  </Button>
-                )}
-              </div>
+                </div>
+              ) : (
+                <div className="space-y-10">
+                  {currentQ.subQuestions?.map((subQuestion, index) => (
+                    <div key={index} className="space-y-4 max-w-3xl mx-auto">
+                      <p className="text-white/95 text-lg md:text-xl font-sans leading-relaxed text-center drop-shadow-md">
+                        {index + 1}. {subQuestion}
+                      </p>
+                      <RadioGroup
+                        value={answers[`${currentQ.id}_${index}`] || ''}
+                        onValueChange={(value) => handleAnswerChange(currentQ.id, value, index)}
+                        className="flex space-x-8 justify-center"
+                      >
+                        {[1, 2, 3, 4, 5].map((num) => (
+                          <div key={num} className="flex items-center space-x-2">
+                            <RadioGroupItem 
+                              value={num.toString()} 
+                              id={`${currentQ.id}_${index}_${num}`}
+                              className="border-white/50 text-white data-[state=checked]:bg-incluya-yellow data-[state=checked]:border-incluya-yellow transition-all duration-200 hover:border-white/70"
+                            />
+                            <Label 
+                              htmlFor={`${currentQ.id}_${index}_${num}`}
+                              className="text-white/80 font-sans cursor-pointer hover:text-white transition-colors text-lg"
+                            >
+                              {num}
+                            </Label>
+                          </div>
+                        ))}
+                      </RadioGroup>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
-          </CardContent>
-        </Card>
+
+            {/* Navigation */}
+            <div className="flex justify-between items-center pt-12 max-w-2xl mx-auto">
+              <Button
+                onClick={handlePrevious}
+                disabled={currentQuestion === 0}
+                variant="ghost"
+                className="text-white/80 hover:text-white hover:bg-white/10 font-sans disabled:opacity-30 transition-all duration-200"
+              >
+                <ChevronLeft className="w-5 h-5 mr-2" />
+                Previous
+              </Button>
+
+              {currentQuestion === questions.length - 1 ? (
+                <Button
+                  onClick={handleSubmit}
+                  className="bg-incluya-yellow hover:bg-incluya-yellow-dark text-incluya-text-dark font-sans px-10 py-3 text-lg transition-all duration-200 hover:scale-105"
+                >
+                  Complete Journey
+                </Button>
+              ) : (
+                <Button
+                  onClick={handleNext}
+                  className="bg-incluya-yellow hover:bg-incluya-yellow-dark text-incluya-text-dark font-sans px-10 py-3 text-lg transition-all duration-200 hover:scale-105"
+                >
+                  Next
+                  <ChevronRight className="w-5 h-5 ml-2" />
+                </Button>
+              )}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
