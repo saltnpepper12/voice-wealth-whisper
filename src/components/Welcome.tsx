@@ -38,7 +38,7 @@ const Welcome = () => {
       <div className="relative z-10 w-full max-w-4xl px-6 sm:px-8 md:px-10 text-center">
         {/* Animated Welcome Text */}
         <div className="mb-20">
-          <h1 className="font-sans text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] xl:text-[12rem] font-light text-white tracking-[0.02em] mb-12 leading-[0.85] uppercase opacity-0 animate-[fade-in_2s_ease-out_0.5s_forwards]">
+          <h1 className="font-sans text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] xl:text-[12rem] font-light text-white tracking-[0.02em] mb-12 leading-[0.85] opacity-0 animate-[fade-in_2s_ease-out_0.5s_forwards]">
             Welcome
           </h1>
           
