@@ -38,7 +38,7 @@ const Login = () => {
           />
           Your browser does not support the video tag.
         </video>
-        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-black/10"></div>
       </div>
 
       {/* Back button - Top left */}
@@ -46,7 +46,7 @@ const Login = () => {
         <Button
           variant="ghost"
           onClick={() => navigate('/')}
-          className="flex items-center gap-1 sm:gap-2 text-white/80 hover:text-white hover:bg-white/10 backdrop-blur-sm font-serif text-sm sm:text-base"
+          className="flex items-center gap-1 sm:gap-2 text-white/90 hover:text-white hover:bg-white/20 backdrop-blur-sm font-serif text-sm sm:text-base"
         >
           <ArrowLeft size={16} className="sm:w-5 sm:h-5" />
           Back to Home
@@ -55,17 +55,17 @@ const Login = () => {
 
       {/* Main Content */}
       <div className="relative z-10 w-full max-w-md px-6 sm:px-8">
-        <div className="bg-black/20 backdrop-blur-md border border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-2xl">
+        <div className="space-y-6 sm:space-y-8">
           {/* Header */}
           <div className="text-center mb-6 sm:mb-8">
-            <h1 className="font-serif text-3xl sm:text-4xl font-light text-white mb-4 sm:mb-6 opacity-0 animate-[fade-in_1.5s_ease-out_0.3s_forwards] tracking-wide">
+            <h1 className="font-serif text-4xl sm:text-5xl font-light text-white mb-4 sm:mb-6 opacity-0 animate-[fade-in_1.5s_ease-out_0.3s_forwards] tracking-wide drop-shadow-lg">
               Incluya
             </h1>
             <div className="space-y-2 sm:space-y-3 opacity-0 animate-[fade-in_1.2s_ease-out_0.6s_forwards]">
-              <h2 className="text-lg sm:text-xl font-light text-white/95 font-serif">
+              <h2 className="text-xl sm:text-2xl font-light text-white/95 font-serif drop-shadow-md">
                 Welcome to your journey
               </h2>
-              <p className="text-white/85 text-xs sm:text-sm leading-relaxed font-serif px-2 sm:px-0">
+              <p className="text-white/90 text-sm sm:text-base leading-relaxed font-serif px-2 sm:px-0 drop-shadow-sm">
                 Take a gentle step towards self-discovery and growth. 
                 Create your account and begin exploring a space designed 
                 for mindful reflection and personal development.
@@ -77,7 +77,7 @@ const Login = () => {
           <div className="space-y-3 mb-6 opacity-0 animate-[fade-in_1.2s_ease-out_1.2s_forwards]">
             <Button
               variant="outline"
-              className="w-full flex items-center justify-center gap-3 py-3 bg-white/90 border-white/30 text-gray-700 hover:bg-white hover:text-gray-800 backdrop-blur-sm font-serif text-sm sm:text-base transition-all duration-200"
+              className="w-full flex items-center justify-center gap-3 py-3 sm:py-4 bg-white/95 border-white/50 text-gray-800 hover:bg-white hover:text-gray-900 backdrop-blur-sm font-serif text-sm sm:text-base transition-all duration-200 shadow-lg"
               type="button"
             >
               <svg className="w-5 h-5" viewBox="0 0 24 24">
@@ -91,7 +91,7 @@ const Login = () => {
             
             <Button
               variant="outline"
-              className="w-full flex items-center justify-center gap-3 py-3 bg-white/90 border-white/30 text-gray-700 hover:bg-white hover:text-gray-800 backdrop-blur-sm font-serif text-sm sm:text-base transition-all duration-200"
+              className="w-full flex items-center justify-center gap-3 py-3 sm:py-4 bg-white/95 border-white/50 text-gray-800 hover:bg-white hover:text-gray-900 backdrop-blur-sm font-serif text-sm sm:text-base transition-all duration-200 shadow-lg"
               type="button"
             >
               <svg className="w-5 h-5" fill="#1877F2" viewBox="0 0 24 24">
@@ -104,17 +104,17 @@ const Login = () => {
           {/* Divider */}
           <div className="relative mb-6 opacity-0 animate-[fade-in_1.2s_ease-out_1.5s_forwards]">
             <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-white/30"></div>
+              <div className="w-full border-t border-white/50"></div>
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-3 bg-transparent text-white/70 font-serif">Or continue with email</span>
+              <span className="px-4 bg-black/20 backdrop-blur-sm text-white/90 font-serif rounded-full">Or continue with email</span>
             </div>
           </div>
 
           {/* Signup Form */}
           <form onSubmit={handleSubmit} className="space-y-4 opacity-0 animate-[fade-in_1.2s_ease-out_1.8s_forwards]">
             <div className="space-y-2">
-              <label htmlFor="email" className="block text-sm font-medium text-white/95 font-serif">
+              <label htmlFor="email" className="block text-sm font-medium text-white/95 font-serif drop-shadow-sm">
                 Email address
               </label>
               <Input
@@ -123,13 +123,13 @@ const Login = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="w-full bg-white/15 border-white/20 text-white placeholder:text-white/50 focus:border-white/40 focus:ring-white/20 backdrop-blur-sm font-serif text-base"
+                className="w-full bg-white/20 border-white/30 text-white placeholder:text-white/60 focus:border-white/60 focus:ring-white/30 backdrop-blur-md font-serif text-base shadow-lg"
                 required
               />
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="password" className="block text-sm font-medium text-white/95 font-serif">
+              <label htmlFor="password" className="block text-sm font-medium text-white/95 font-serif drop-shadow-sm">
                 Password
               </label>
               <div className="relative">
@@ -139,13 +139,13 @@ const Login = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Create your password"
-                  className="w-full pr-10 bg-white/15 border-white/20 text-white placeholder:text-white/50 focus:border-white/40 focus:ring-white/20 backdrop-blur-sm font-serif text-base"
+                  className="w-full pr-10 bg-white/20 border-white/30 text-white placeholder:text-white/60 focus:border-white/60 focus:ring-white/30 backdrop-blur-md font-serif text-base shadow-lg"
                   required
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute inset-y-0 right-0 flex items-center pr-3 text-white/60 hover:text-white/90"
+                  className="absolute inset-y-0 right-0 flex items-center pr-3 text-white/70 hover:text-white/95"
                 >
                   {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
                 </button>
@@ -158,9 +158,9 @@ const Login = () => {
                 id="terms"
                 checked={agreeToTerms}
                 onCheckedChange={(checked) => setAgreeToTerms(checked as boolean)}
-                className="border-white/30 data-[state=checked]:bg-white/20 data-[state=checked]:border-white/50 mt-1"
+                className="border-white/40 data-[state=checked]:bg-white/30 data-[state=checked]:border-white/60 mt-1 backdrop-blur-sm"
               />
-              <label htmlFor="terms" className="text-sm text-white/85 font-serif leading-relaxed">
+              <label htmlFor="terms" className="text-sm text-white/90 font-serif leading-relaxed drop-shadow-sm">
                 I agree to the{" "}
                 <Link to="/terms" className="underline hover:text-white">
                   Terms of Service
@@ -175,7 +175,7 @@ const Login = () => {
             <Button
               type="submit"
               disabled={!agreeToTerms}
-              className="w-full bg-white/25 hover:bg-white/35 text-white py-3 font-medium backdrop-blur-sm border border-white/20 hover:border-white/40 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed font-serif text-base"
+              className="w-full bg-white/30 hover:bg-white/40 text-white py-3 sm:py-4 font-medium backdrop-blur-md border border-white/30 hover:border-white/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed font-serif text-base shadow-lg"
             >
               Begin Your Journey
             </Button>
@@ -183,7 +183,7 @@ const Login = () => {
 
           {/* Already have account Link */}
           <div className="text-center mt-6 opacity-0 animate-[fade-in_1.2s_ease-out_2.1s_forwards]">
-            <p className="text-sm text-white/75 font-serif">
+            <p className="text-sm text-white/85 font-serif drop-shadow-sm">
               Already part of our community?{" "}
               <Link
                 to="/signin"
@@ -196,7 +196,7 @@ const Login = () => {
 
           {/* Welcome Message */}
           <div className="text-center mt-4 opacity-0 animate-[fade-in_1.2s_ease-out_2.4s_forwards]">
-            <p className="text-xs text-white/65 leading-relaxed font-serif px-2 sm:px-0">
+            <p className="text-xs text-white/75 leading-relaxed font-serif px-2 sm:px-0 drop-shadow-sm">
               Every journey begins with a single step. We're honored to be part of yours.
             </p>
           </div>
