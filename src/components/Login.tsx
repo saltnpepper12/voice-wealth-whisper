@@ -181,26 +181,6 @@ const Login = () => {
               Begin Your Journey
             </Button>
           </form>
-
-          {/* Already have account Link */}
-          <div className="text-center mt-6 opacity-0 animate-[fade-in_1.2s_ease-out_2.1s_forwards]">
-            <p className="text-sm text-white/85 font-serif drop-shadow-sm">
-              Already part of our community?{" "}
-              <Link
-                to="/signin"
-                className="font-medium text-white hover:text-white/80 underline-offset-2 hover:underline"
-              >
-                Sign in here
-              </Link>
-            </p>
-          </div>
-
-          {/* Welcome Message */}
-          <div className="text-center mt-4 opacity-0 animate-[fade-in_1.2s_ease-out_2.4s_forwards]">
-            <p className="text-xs text-white/75 leading-relaxed font-serif px-2 sm:px-0 drop-shadow-sm">
-              Every journey begins with a single step. We're honored to be part of yours.
-            </p>
-          </div>
         </div>
       </div>
     </div>
