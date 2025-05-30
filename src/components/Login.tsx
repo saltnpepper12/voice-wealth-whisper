@@ -20,40 +20,59 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex">
-      {/* Left side - Login Form */}
-      <div className="flex-1 flex flex-col justify-center items-center px-4 py-12 bg-white">
-        <div className="w-full max-w-md space-y-8">
-          {/* Back button */}
-          <div className="flex items-center">
-            <Button
-              variant="ghost"
-              onClick={() => navigate('/')}
-              className="flex items-center gap-2 text-gray-600 hover:text-gray-900"
-            >
-              <ArrowLeft size={16} />
-              Back to Home
-            </Button>
-          </div>
+    <div className="min-h-screen relative overflow-hidden flex items-center justify-center">
+      {/* Video Background */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-[-1]">
+        <video 
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          className="absolute w-full h-full object-cover"
+        >
+          <source 
+            src="https://raw.githubusercontent.com/saltnpepper12/videos/main/Login.mp4" 
+            type="video/mp4" 
+          />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute inset-0 bg-black/30"></div>
+      </div>
 
+      {/* Back button - Top left */}
+      <div className="absolute top-6 left-6 z-20">
+        <Button
+          variant="ghost"
+          onClick={() => navigate('/')}
+          className="flex items-center gap-2 text-white/80 hover:text-white hover:bg-white/10 backdrop-blur-sm"
+        >
+          <ArrowLeft size={16} />
+          Back to Home
+        </Button>
+      </div>
+
+      {/* Main Content */}
+      <div className="relative z-10 w-full max-w-md px-6">
+        <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 shadow-2xl">
           {/* Header */}
-          <div className="text-center">
-            <h1 className="font-serif text-4xl font-bold text-incluya-text-dark mb-2">
+          <div className="text-center mb-8">
+            <h1 className="font-serif text-4xl font-bold text-white mb-4 opacity-0 animate-[fade-in_1.5s_ease-out_0.3s_forwards]">
               INCLUYA
             </h1>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-2">
+            <h2 className="text-xl font-light text-white/90 mb-2 opacity-0 animate-[fade-in_1.2s_ease-out_0.6s_forwards]">
               Welcome back
             </h2>
-            <p className="text-gray-600">
+            <p className="text-white/70 text-sm opacity-0 animate-[fade-in_1.2s_ease-out_0.9s_forwards]">
               Please sign in to your account
             </p>
           </div>
 
           {/* Social Login Buttons */}
-          <div className="space-y-3">
+          <div className="space-y-3 mb-6 opacity-0 animate-[fade-in_1.2s_ease-out_1.2s_forwards]">
             <Button
               variant="outline"
-              className="w-full flex items-center justify-center gap-3 py-6 border-gray-300 hover:bg-gray-50"
+              className="w-full flex items-center justify-center gap-3 py-3 bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm"
               type="button"
             >
               <svg className="w-5 h-5" viewBox="0 0 24 24">
@@ -67,7 +86,7 @@ const Login = () => {
             
             <Button
               variant="outline"
-              className="w-full flex items-center justify-center gap-3 py-6 border-gray-300 hover:bg-gray-50"
+              className="w-full flex items-center justify-center gap-3 py-3 bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm"
               type="button"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -78,19 +97,19 @@ const Login = () => {
           </div>
 
           {/* Divider */}
-          <div className="relative">
+          <div className="relative mb-6 opacity-0 animate-[fade-in_1.2s_ease-out_1.5s_forwards]">
             <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-gray-300"></div>
+              <div className="w-full border-t border-white/30"></div>
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-2 bg-white text-gray-500">Or continue with email</span>
+              <span className="px-3 bg-transparent text-white/70">Or continue with email</span>
             </div>
           </div>
 
           {/* Login Form */}
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-4 opacity-0 animate-[fade-in_1.2s_ease-out_1.8s_forwards]">
             <div className="space-y-2">
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="email" className="block text-sm font-medium text-white/90">
                 Email address
               </label>
               <Input
@@ -99,13 +118,13 @@ const Login = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="w-full border-gray-300 focus:border-incluya-yellow-dark focus:ring focus:ring-incluya-yellow/30"
+                className="w-full bg-white/10 border-white/30 text-white placeholder:text-white/50 focus:border-white/50 focus:ring-white/30 backdrop-blur-sm"
                 required
               />
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="password" className="block text-sm font-medium text-white/90">
                 Password
               </label>
               <div className="relative">
@@ -115,13 +134,13 @@ const Login = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Enter your password"
-                  className="w-full pr-10 border-gray-300 focus:border-incluya-yellow-dark focus:ring focus:ring-incluya-yellow/30"
+                  className="w-full pr-10 bg-white/10 border-white/30 text-white placeholder:text-white/50 focus:border-white/50 focus:ring-white/30 backdrop-blur-sm"
                   required
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400 hover:text-gray-600"
+                  className="absolute inset-y-0 right-0 flex items-center pr-3 text-white/60 hover:text-white/90"
                 >
                   {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
                 </button>
@@ -129,20 +148,21 @@ const Login = () => {
             </div>
 
             {/* Remember Me & Forgot Password */}
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between py-2">
               <div className="flex items-center space-x-2">
                 <Checkbox
                   id="remember"
                   checked={rememberMe}
                   onCheckedChange={(checked) => setRememberMe(checked as boolean)}
+                  className="border-white/30 data-[state=checked]:bg-white/20 data-[state=checked]:border-white/50"
                 />
-                <label htmlFor="remember" className="text-sm text-gray-700">
+                <label htmlFor="remember" className="text-sm text-white/80">
                   Remember me
                 </label>
               </div>
               <Link
                 to="/forgot-password"
-                className="text-sm font-medium text-incluya-turquoise-dark hover:text-incluya-turquoise"
+                className="text-sm font-medium text-white/80 hover:text-white underline-offset-2 hover:underline"
               >
                 Forgot password?
               </Link>
@@ -150,19 +170,19 @@ const Login = () => {
 
             <Button
               type="submit"
-              className="w-full bg-incluya-yellow-dark hover:bg-incluya-yellow text-incluya-text-dark py-6 font-medium"
+              className="w-full bg-white/20 hover:bg-white/30 text-white py-3 font-medium backdrop-blur-sm border border-white/30 hover:border-white/50 transition-all duration-300"
             >
               Sign In
             </Button>
           </form>
 
           {/* Sign Up Link */}
-          <div className="text-center">
-            <p className="text-sm text-gray-600">
+          <div className="text-center mt-6 opacity-0 animate-[fade-in_1.2s_ease-out_2.1s_forwards]">
+            <p className="text-sm text-white/70">
               Don't have an account?{" "}
               <Link
                 to="/signup"
-                className="font-medium text-incluya-turquoise-dark hover:text-incluya-turquoise"
+                className="font-medium text-white hover:text-white/80 underline-offset-2 hover:underline"
               >
                 Sign up for free
               </Link>
@@ -170,29 +190,18 @@ const Login = () => {
           </div>
 
           {/* Terms and Privacy */}
-          <div className="text-center">
-            <p className="text-xs text-gray-500">
+          <div className="text-center mt-4 opacity-0 animate-[fade-in_1.2s_ease-out_2.4s_forwards]">
+            <p className="text-xs text-white/60">
               By signing in, you agree to our{" "}
-              <Link to="/terms" className="underline hover:text-gray-700">
+              <Link to="/terms" className="underline hover:text-white/80">
                 Terms of Service
               </Link>{" "}
               and{" "}
-              <Link to="/privacy" className="underline hover:text-gray-700">
+              <Link to="/privacy" className="underline hover:text-white/80">
                 Privacy Policy
               </Link>
             </p>
           </div>
-        </div>
-      </div>
-
-      {/* Right side - Background Image/Pattern */}
-      <div className="hidden lg:block lg:flex-1 bg-login-pattern bg-cover bg-center relative">
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-        <div className="absolute bottom-8 left-8 right-8 text-white">
-          <blockquote className="text-xl font-light leading-relaxed">
-            "Embrace your journey with compassion, nurture your growth with wisdom, and discover the abundance that flows from within."
-          </blockquote>
-          <cite className="block mt-4 text-sm opacity-75">— Incluya Wisdom</cite>
         </div>
       </div>
     </div>
