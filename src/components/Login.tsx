@@ -41,23 +41,24 @@ const Login = () => {
         <div className="absolute inset-0 bg-black/10"></div>
       </div>
 
-      {/* Back button - Top left */}
+      {/* Back button - Top left with better mobile positioning */}
       <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-20">
         <Button
           variant="ghost"
           onClick={() => navigate('/')}
-          className="flex items-center gap-1 sm:gap-2 text-white/90 hover:text-white hover:bg-white/20 backdrop-blur-sm font-serif text-sm sm:text-base"
+          className="flex items-center gap-1 sm:gap-2 text-white/90 hover:text-white hover:bg-white/20 backdrop-blur-sm font-serif text-xs sm:text-base p-2 sm:px-4 sm:py-2"
         >
-          <ArrowLeft size={16} className="sm:w-5 sm:h-5" />
-          Back to Home
+          <ArrowLeft size={14} className="sm:w-5 sm:h-5" />
+          <span className="hidden xs:inline">Back to Home</span>
+          <span className="xs:hidden">Back</span>
         </Button>
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 w-full max-w-md px-6 sm:px-8">
+      <div className="relative z-10 w-full max-w-md px-6 sm:px-8 pt-16 sm:pt-0">
         <div className="space-y-6 sm:space-y-8">
-          {/* Header */}
-          <div className="text-center mb-6 sm:mb-8">
+          {/* Header with better mobile spacing */}
+          <div className="text-center mb-6 sm:mb-8 mt-4 sm:mt-0">
             <h1 className="font-serif text-4xl sm:text-5xl font-light text-white mb-4 sm:mb-6 opacity-0 animate-[fade-in_1.5s_ease-out_0.3s_forwards] tracking-wide drop-shadow-lg">
               Incluya
             </h1>
@@ -73,11 +74,11 @@ const Login = () => {
             </div>
           </div>
 
-          {/* Social Signup Buttons */}
+          {/* Social Signup Buttons - Removed white backgrounds */}
           <div className="space-y-3 mb-6 opacity-0 animate-[fade-in_1.2s_ease-out_1.2s_forwards]">
             <Button
               variant="outline"
-              className="w-full flex items-center justify-center gap-3 py-3 sm:py-4 bg-white/95 border-white/50 text-gray-800 hover:bg-white hover:text-gray-900 backdrop-blur-sm font-serif text-sm sm:text-base transition-all duration-200 shadow-lg"
+              className="w-full flex items-center justify-center gap-3 py-3 sm:py-4 bg-white/10 border-white/30 text-white hover:bg-white/20 hover:text-white backdrop-blur-sm font-serif text-sm sm:text-base transition-all duration-200 shadow-lg"
               type="button"
             >
               <svg className="w-5 h-5" viewBox="0 0 24 24">
@@ -91,7 +92,7 @@ const Login = () => {
             
             <Button
               variant="outline"
-              className="w-full flex items-center justify-center gap-3 py-3 sm:py-4 bg-white/95 border-white/50 text-gray-800 hover:bg-white hover:text-gray-900 backdrop-blur-sm font-serif text-sm sm:text-base transition-all duration-200 shadow-lg"
+              className="w-full flex items-center justify-center gap-3 py-3 sm:py-4 bg-white/10 border-white/30 text-white hover:bg-white/20 hover:text-white backdrop-blur-sm font-serif text-sm sm:text-base transition-all duration-200 shadow-lg"
               type="button"
             >
               <svg className="w-5 h-5" fill="#1877F2" viewBox="0 0 24 24">
