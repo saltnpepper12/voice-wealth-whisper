@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -21,7 +20,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden flex items-center justify-center">
+    <div className="min-h-screen relative overflow-hidden flex items-start justify-center pt-8 sm:pt-16">
       {/* Video Background */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-[-1]">
         <video 
@@ -55,14 +54,14 @@ const Login = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 w-full max-w-md px-6 sm:px-8 pt-4 sm:pt-0">
-        <div className="space-y-4 sm:space-y-6">
+      <div className="relative z-10 w-full max-w-md px-6 sm:px-8">
+        <div className="space-y-3 sm:space-y-4">
           {/* Header with better mobile spacing */}
-          <div className="text-center mb-4 sm:mb-6">
-            <h1 className="font-serif text-4xl sm:text-5xl font-light text-white mb-3 sm:mb-4 opacity-0 animate-[fade-in_1.5s_ease-out_0.3s_forwards] tracking-wide drop-shadow-lg">
+          <div className="text-center mb-3 sm:mb-4">
+            <h1 className="font-serif text-4xl sm:text-5xl font-light text-white mb-2 sm:mb-3 opacity-0 animate-[fade-in_1.5s_ease-out_0.3s_forwards] tracking-wide drop-shadow-lg">
               Incluya
             </h1>
-            <div className="space-y-2 opacity-0 animate-[fade-in_1.2s_ease-out_0.6s_forwards]">
+            <div className="space-y-1 sm:space-y-2 opacity-0 animate-[fade-in_1.2s_ease-out_0.6s_forwards]">
               <h2 className="text-xl sm:text-2xl font-light text-white/95 font-serif drop-shadow-md">
                 Welcome to your journey
               </h2>
@@ -75,7 +74,7 @@ const Login = () => {
           </div>
 
           {/* Social Signup Buttons - Reduced spacing */}
-          <div className="space-y-3 mb-4 opacity-0 animate-[fade-in_1.2s_ease-out_1.2s_forwards]">
+          <div className="space-y-3 mb-3 opacity-0 animate-[fade-in_1.2s_ease-out_1.2s_forwards]">
             <Button
               variant="outline"
               className="w-full flex items-center justify-center gap-3 py-3 sm:py-4 bg-white/10 border-white/30 text-white hover:bg-white/20 hover:text-white backdrop-blur-sm font-serif text-sm sm:text-base transition-all duration-200 shadow-lg"
@@ -103,7 +102,7 @@ const Login = () => {
           </div>
 
           {/* Divider */}
-          <div className="relative mb-4 opacity-0 animate-[fade-in_1.2s_ease-out_1.5s_forwards]">
+          <div className="relative mb-3 opacity-0 animate-[fade-in_1.2s_ease-out_1.5s_forwards]">
             <div className="absolute inset-0 flex items-center">
               <div className="w-full border-t border-white/50"></div>
             </div>
@@ -113,7 +112,7 @@ const Login = () => {
           </div>
 
           {/* Signup Form */}
-          <form onSubmit={handleSubmit} className="space-y-4 opacity-0 animate-[fade-in_1.2s_ease-out_1.8s_forwards]">
+          <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4 opacity-0 animate-[fade-in_1.2s_ease-out_1.8s_forwards]">
             <div className="space-y-2">
               <label htmlFor="email" className="block text-sm font-medium text-white/95 font-serif drop-shadow-sm">
                 Email address
