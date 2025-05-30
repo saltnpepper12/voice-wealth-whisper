@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -7,7 +6,7 @@ const Welcome = () => {
 
   const handleBeginJourney = () => {
     console.log('Beginning journey - navigating to intake questions');
-    // navigate('/intake');
+    navigate('/intake');
   };
 
   return (
