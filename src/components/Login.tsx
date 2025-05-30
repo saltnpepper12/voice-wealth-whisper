@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -20,7 +21,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden flex items-start justify-center pt-8 sm:pt-16">
+    <div className="min-h-screen relative overflow-hidden flex items-start justify-center pt-16 sm:pt-20">
       {/* Video Background */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-[-1]">
         <video 
