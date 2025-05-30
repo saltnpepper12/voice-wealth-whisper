@@ -1,10 +1,17 @@
 
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import VideoBackground from '@/components/VideoBackground';
 
 const Hero = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/login');
+  };
+
   return (
-    <section className="relative overflow-hidden min-h-screen flex items-center justify-center">
+    <section className="relative overflow-hidden min-h-screen flex items-center justify-center cursor-pointer" onClick={handleClick}>
       <VideoBackground />
       
       <div className="relative z-10 w-full h-screen flex flex-col justify-center items-center px-6 py-16">
@@ -20,6 +27,7 @@ const Hero = () => {
           <p className="text-white text-lg md:text-xl lg:text-2xl font-light leading-relaxed drop-shadow-lg tracking-wide opacity-80">
             "Embrace your journey with compassion, nurture your growth with wisdom, and discover the abundance that flows from within."
           </p>
+          <p className="text-white/60 text-sm mt-4">Click anywhere to continue</p>
         </div>
       </div>
     </section>
