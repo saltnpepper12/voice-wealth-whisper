@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -15,7 +16,8 @@ const Login = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Sign up attempt:', { email, password, agreeToTerms });
-    // Add signup logic here
+    // Navigate to welcome page after successful signup
+    navigate('/welcome');
   };
 
   return (
