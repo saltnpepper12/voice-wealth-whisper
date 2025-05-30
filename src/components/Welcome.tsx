@@ -1,7 +1,5 @@
 
 import React from 'react';
-import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const Welcome = () => {
@@ -13,7 +11,10 @@ const Welcome = () => {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden flex items-center justify-center">
+    <div 
+      className="min-h-screen relative overflow-hidden flex items-center justify-center cursor-pointer"
+      onClick={handleBeginJourney}
+    >
       {/* Video Background */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-[-1]">
         <video 
@@ -51,18 +52,16 @@ const Welcome = () => {
             When you're ready, we'll begin exploring the depths of your inner world together.
           </p>
           
-          <Button
-            onClick={handleBeginJourney}
-            className="bg-white/10 hover:bg-white/20 text-white px-16 py-6 text-lg font-light backdrop-blur-md border border-white/20 hover:border-white/40 transition-all duration-700 font-sans rounded-full group shadow-2xl tracking-normal uppercase"
-          >
-            <span className="flex items-center gap-4">
-              Begin the Journey
-              <ArrowRight className="h-5 w-5 group-hover:translate-x-2 transition-transform duration-500" />
-            </span>
-          </Button>
+          <p className="text-white text-xl font-light font-sans mb-8 tracking-normal uppercase">
+            Begin the Journey
+          </p>
           
-          <p className="text-white/50 text-sm mt-8 font-sans font-light tracking-normal">
+          <p className="text-white/50 text-sm font-sans font-light tracking-normal">
             There is no hurry. Take all the time you need.
+          </p>
+          
+          <p className="text-white/40 text-xs mt-6 font-sans font-light tracking-normal">
+            Click anywhere to continue
           </p>
         </div>
       </div>
