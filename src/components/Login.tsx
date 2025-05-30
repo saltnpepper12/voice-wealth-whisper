@@ -42,30 +42,30 @@ const Login = () => {
       </div>
 
       {/* Back button - Top left */}
-      <div className="absolute top-6 left-6 z-20">
+      <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-20">
         <Button
           variant="ghost"
           onClick={() => navigate('/')}
-          className="flex items-center gap-2 text-white/80 hover:text-white hover:bg-white/10 backdrop-blur-sm font-serif"
+          className="flex items-center gap-1 sm:gap-2 text-white/80 hover:text-white hover:bg-white/10 backdrop-blur-sm font-serif text-sm sm:text-base"
         >
-          <ArrowLeft size={16} />
+          <ArrowLeft size={14} className="sm:w-4 sm:h-4" />
           Back to Home
         </Button>
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 w-full max-w-md px-6">
-        <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 shadow-2xl">
+      <div className="relative z-10 w-full max-w-md px-4 sm:px-6">
+        <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-2xl">
           {/* Header */}
-          <div className="text-center mb-8">
-            <h1 className="font-serif text-4xl font-light text-white mb-6 opacity-0 animate-[fade-in_1.5s_ease-out_0.3s_forwards] tracking-wide">
+          <div className="text-center mb-6 sm:mb-8">
+            <h1 className="font-serif text-3xl sm:text-4xl font-light text-white mb-4 sm:mb-6 opacity-0 animate-[fade-in_1.5s_ease-out_0.3s_forwards] tracking-wide">
               Incluya
             </h1>
-            <div className="space-y-3 opacity-0 animate-[fade-in_1.2s_ease-out_0.6s_forwards]">
-              <h2 className="text-xl font-light text-white/90 font-serif">
+            <div className="space-y-2 sm:space-y-3 opacity-0 animate-[fade-in_1.2s_ease-out_0.6s_forwards]">
+              <h2 className="text-lg sm:text-xl font-light text-white/90 font-serif">
                 Welcome to your journey
               </h2>
-              <p className="text-white/80 text-sm leading-relaxed font-serif">
+              <p className="text-white/80 text-xs sm:text-sm leading-relaxed font-serif px-2 sm:px-0">
                 Take a gentle step towards self-discovery and growth. 
                 Create your account and begin exploring a space designed 
                 for mindful reflection and personal development.
@@ -74,13 +74,13 @@ const Login = () => {
           </div>
 
           {/* Social Signup Buttons */}
-          <div className="space-y-3 mb-6 opacity-0 animate-[fade-in_1.2s_ease-out_1.2s_forwards]">
+          <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6 opacity-0 animate-[fade-in_1.2s_ease-out_1.2s_forwards]">
             <Button
               variant="outline"
-              className="w-full flex items-center justify-center gap-3 py-3 bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm font-serif"
+              className="w-full flex items-center justify-center gap-2 sm:gap-3 py-2.5 sm:py-3 bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm font-serif text-sm sm:text-base"
               type="button"
             >
-              <svg className="w-5 h-5" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24">
                 <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                 <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
                 <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
@@ -91,10 +91,10 @@ const Login = () => {
             
             <Button
               variant="outline"
-              className="w-full flex items-center justify-center gap-3 py-3 bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm font-serif"
+              className="w-full flex items-center justify-center gap-2 sm:gap-3 py-2.5 sm:py-3 bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm font-serif text-sm sm:text-base"
               type="button"
             >
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
               </svg>
               Continue with Facebook
@@ -102,19 +102,19 @@ const Login = () => {
           </div>
 
           {/* Divider */}
-          <div className="relative mb-6 opacity-0 animate-[fade-in_1.2s_ease-out_1.5s_forwards]">
+          <div className="relative mb-4 sm:mb-6 opacity-0 animate-[fade-in_1.2s_ease-out_1.5s_forwards]">
             <div className="absolute inset-0 flex items-center">
               <div className="w-full border-t border-white/30"></div>
             </div>
-            <div className="relative flex justify-center text-sm">
+            <div className="relative flex justify-center text-xs sm:text-sm">
               <span className="px-3 bg-transparent text-white/70 font-serif">Or continue with email</span>
             </div>
           </div>
 
           {/* Signup Form */}
-          <form onSubmit={handleSubmit} className="space-y-4 opacity-0 animate-[fade-in_1.2s_ease-out_1.8s_forwards]">
-            <div className="space-y-2">
-              <label htmlFor="email" className="block text-sm font-medium text-white/90 font-serif">
+          <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4 opacity-0 animate-[fade-in_1.2s_ease-out_1.8s_forwards]">
+            <div className="space-y-1 sm:space-y-2">
+              <label htmlFor="email" className="block text-xs sm:text-sm font-medium text-white/90 font-serif">
                 Email address
               </label>
               <Input
@@ -123,13 +123,13 @@ const Login = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="w-full bg-white/10 border-white/30 text-white placeholder:text-white/50 focus:border-white/50 focus:ring-white/30 backdrop-blur-sm font-serif"
+                className="w-full bg-white/10 border-white/30 text-white placeholder:text-white/50 focus:border-white/50 focus:ring-white/30 backdrop-blur-sm font-serif text-sm sm:text-base"
                 required
               />
             </div>
 
-            <div className="space-y-2">
-              <label htmlFor="password" className="block text-sm font-medium text-white/90 font-serif">
+            <div className="space-y-1 sm:space-y-2">
+              <label htmlFor="password" className="block text-xs sm:text-sm font-medium text-white/90 font-serif">
                 Password
               </label>
               <div className="relative">
@@ -139,7 +139,7 @@ const Login = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Create your password"
-                  className="w-full pr-10 bg-white/10 border-white/30 text-white placeholder:text-white/50 focus:border-white/50 focus:ring-white/30 backdrop-blur-sm font-serif"
+                  className="w-full pr-10 bg-white/10 border-white/30 text-white placeholder:text-white/50 focus:border-white/50 focus:ring-white/30 backdrop-blur-sm font-serif text-sm sm:text-base"
                   required
                 />
                 <button
@@ -147,20 +147,20 @@ const Login = () => {
                   onClick={() => setShowPassword(!showPassword)}
                   className="absolute inset-y-0 right-0 flex items-center pr-3 text-white/60 hover:text-white/90"
                 >
-                  {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
+                  {showPassword ? <EyeOff size={14} className="sm:w-4 sm:h-4" /> : <Eye size={14} className="sm:w-4 sm:h-4" />}
                 </button>
               </div>
             </div>
 
             {/* Terms Agreement */}
-            <div className="flex items-center space-x-2 py-2">
+            <div className="flex items-start space-x-2 py-1 sm:py-2">
               <Checkbox
                 id="terms"
                 checked={agreeToTerms}
                 onCheckedChange={(checked) => setAgreeToTerms(checked as boolean)}
-                className="border-white/30 data-[state=checked]:bg-white/20 data-[state=checked]:border-white/50"
+                className="border-white/30 data-[state=checked]:bg-white/20 data-[state=checked]:border-white/50 mt-0.5"
               />
-              <label htmlFor="terms" className="text-sm text-white/80 font-serif">
+              <label htmlFor="terms" className="text-xs sm:text-sm text-white/80 font-serif leading-relaxed">
                 I agree to the{" "}
                 <Link to="/terms" className="underline hover:text-white">
                   Terms of Service
@@ -175,15 +175,15 @@ const Login = () => {
             <Button
               type="submit"
               disabled={!agreeToTerms}
-              className="w-full bg-white/20 hover:bg-white/30 text-white py-3 font-medium backdrop-blur-sm border border-white/30 hover:border-white/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed font-serif"
+              className="w-full bg-white/20 hover:bg-white/30 text-white py-2.5 sm:py-3 font-medium backdrop-blur-sm border border-white/30 hover:border-white/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed font-serif text-sm sm:text-base"
             >
               Begin Your Journey
             </Button>
           </form>
 
           {/* Already have account Link */}
-          <div className="text-center mt-6 opacity-0 animate-[fade-in_1.2s_ease-out_2.1s_forwards]">
-            <p className="text-sm text-white/70 font-serif">
+          <div className="text-center mt-4 sm:mt-6 opacity-0 animate-[fade-in_1.2s_ease-out_2.1s_forwards]">
+            <p className="text-xs sm:text-sm text-white/70 font-serif">
               Already part of our community?{" "}
               <Link
                 to="/signin"
@@ -195,8 +195,8 @@ const Login = () => {
           </div>
 
           {/* Welcome Message */}
-          <div className="text-center mt-4 opacity-0 animate-[fade-in_1.2s_ease-out_2.4s_forwards]">
-            <p className="text-xs text-white/60 leading-relaxed font-serif">
+          <div className="text-center mt-3 sm:mt-4 opacity-0 animate-[fade-in_1.2s_ease-out_2.4s_forwards]">
+            <p className="text-xs text-white/60 leading-relaxed font-serif px-2 sm:px-0">
               Every journey begins with a single step. We're honored to be part of yours.
             </p>
           </div>
