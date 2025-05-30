@@ -57,15 +57,19 @@ const Login = () => {
         <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 shadow-2xl">
           {/* Header */}
           <div className="text-center mb-8">
-            <h1 className="font-serif text-4xl font-bold text-white mb-4 opacity-0 animate-[fade-in_1.5s_ease-out_0.3s_forwards]">
-              INCLUYA
+            <h1 className="font-sans text-4xl font-light text-white mb-6 opacity-0 animate-[fade-in_1.5s_ease-out_0.3s_forwards] tracking-wide">
+              Incluya
             </h1>
-            <h2 className="text-xl font-light text-white/90 mb-2 opacity-0 animate-[fade-in_1.2s_ease-out_0.6s_forwards]">
-              Join us today
-            </h2>
-            <p className="text-white/70 text-sm opacity-0 animate-[fade-in_1.2s_ease-out_0.9s_forwards]">
-              Create your new account to get started
-            </p>
+            <div className="space-y-3 opacity-0 animate-[fade-in_1.2s_ease-out_0.6s_forwards]">
+              <h2 className="text-xl font-light text-white/90">
+                Welcome to your journey
+              </h2>
+              <p className="text-white/80 text-sm leading-relaxed">
+                Take a gentle step towards self-discovery and growth. 
+                Create your account and begin exploring a space designed 
+                for mindful reflection and personal development.
+              </p>
+            </div>
           </div>
 
           {/* Social Signup Buttons */}
@@ -102,7 +106,7 @@ const Login = () => {
               <div className="w-full border-t border-white/30"></div>
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-3 bg-transparent text-white/70">Or sign up with email</span>
+              <span className="px-3 bg-transparent text-white/70">Or continue with email</span>
             </div>
           </div>
 
@@ -172,14 +176,14 @@ const Login = () => {
               disabled={!agreeToTerms}
               className="w-full bg-white/20 hover:bg-white/30 text-white py-3 font-medium backdrop-blur-sm border border-white/30 hover:border-white/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Create Account
+              Begin Your Journey
             </Button>
           </form>
 
           {/* Already have account Link */}
           <div className="text-center mt-6 opacity-0 animate-[fade-in_1.2s_ease-out_2.1s_forwards]">
             <p className="text-sm text-white/70">
-              Already have an account?{" "}
+              Already part of our community?{" "}
               <Link
                 to="/signin"
                 className="font-medium text-white hover:text-white/80 underline-offset-2 hover:underline"
@@ -191,8 +195,8 @@ const Login = () => {
 
           {/* Welcome Message */}
           <div className="text-center mt-4 opacity-0 animate-[fade-in_1.2s_ease-out_2.4s_forwards]">
-            <p className="text-xs text-white/60">
-              Welcome to Incluya! We're excited to have you join our community.
+            <p className="text-xs text-white/60 leading-relaxed">
+              Every journey begins with a single step. We're honored to be part of yours.
             </p>
           </div>
         </div>
