@@ -2,6 +2,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import VideoBackground from '@/components/VideoBackground';
+import { Button } from '@/components/ui/button';
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative overflow-hidden min-h-screen flex items-center justify-center cursor-pointer" onClick={handleClick}>
+    <section className="relative overflow-hidden min-h-screen flex items-center justify-center">
       <VideoBackground />
       
       <div className="relative z-10 w-full h-screen flex flex-col justify-center items-center px-6 py-16">
@@ -23,11 +24,19 @@ const Hero = () => {
           </h1>
         </div>
         
-        <div className="text-center max-w-3xl opacity-0 animate-[fade-in_1.2s_ease-out_2.5s_forwards,gentle-pulse_8s_ease-in-out_4s_infinite]">
+        <div className="text-center max-w-3xl opacity-0 animate-[fade-in_1.2s_ease-out_2.5s_forwards,gentle-pulse_8s_ease-in-out_4s_infinite] mb-12">
           <p className="text-white text-lg md:text-xl lg:text-2xl font-light leading-relaxed drop-shadow-lg tracking-wide opacity-80">
             "Embrace your journey with compassion, nurture your growth with wisdom, and discover the abundance that flows from within."
           </p>
-          <p className="text-white/60 text-sm mt-4">Click anywhere to continue</p>
+        </div>
+
+        <div className="opacity-0 animate-[fade-in_1.5s_ease-out_3.5s_forwards]">
+          <Button
+            onClick={handleClick}
+            className="bg-incluya-yellow hover:bg-incluya-yellow-dark text-incluya-text-dark font-semibold px-8 py-4 text-lg rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-white/20 backdrop-blur-sm"
+          >
+            Begin Your Journey
+          </Button>
         </div>
       </div>
     </section>
