@@ -1,14 +1,13 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const Welcome = () => {
   const navigate = useNavigate();
 
   const handleBeginJourney = () => {
-    // Navigate to intake questions page (to be created later)
     console.log('Beginning journey - navigating to intake questions');
     // navigate('/intake');
   };
@@ -31,43 +30,39 @@ const Welcome = () => {
           />
           Your browser does not support the video tag.
         </video>
-        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 w-full max-w-4xl px-6 text-center">
-        {/* Welcome Header - Immediate appearance */}
-        <div className="mb-16">
-          <div className="flex items-center justify-center mb-8">
-            <Sparkles className="text-incluya-yellow mr-4 h-10 w-10 opacity-80" />
-            <h1 className="font-serif text-6xl md:text-7xl lg:text-8xl font-light text-white tracking-wide">
-              Welcome
-            </h1>
-            <Sparkles className="text-incluya-yellow ml-4 h-10 w-10 opacity-80" />
-          </div>
-          <p className="text-white/90 text-2xl md:text-3xl font-light font-serif tracking-wide">
-            to your journey of self-discovery
+      <div className="relative z-10 w-full max-w-5xl px-8 text-center">
+        {/* Welcome Text */}
+        <div className="mb-20">
+          <h1 className="font-serif text-7xl md:text-8xl lg:text-9xl font-normal text-white tracking-wider mb-8 leading-none">
+            Welcome
+          </h1>
+          <p className="text-white/80 text-xl md:text-2xl font-light tracking-wide font-serif italic mb-16">
+            to your journey within
           </p>
         </div>
 
-        {/* Simple Message */}
-        <div className="mb-16 opacity-0 animate-[fade-in_2s_ease-out_1s_forwards]">
-          <p className="text-white/90 text-xl md:text-2xl leading-relaxed font-serif mb-12">
-            Are you ready to explore what lies within?
+        {/* Call to Action */}
+        <div className="opacity-0 animate-[fade-in_1.5s_ease-out_2s_forwards]">
+          <p className="text-white/90 text-lg md:text-xl leading-relaxed font-serif mb-12 max-w-2xl mx-auto">
+            When you're ready, we'll begin exploring the depths of your inner world together.
           </p>
           
           <Button
             onClick={handleBeginJourney}
-            className="bg-white/20 hover:bg-white/30 text-white px-12 py-4 text-lg font-medium backdrop-blur-sm border border-white/30 hover:border-white/50 transition-all duration-500 font-serif rounded-full group"
+            className="bg-white/10 hover:bg-white/20 text-white px-16 py-6 text-lg font-light backdrop-blur-md border border-white/20 hover:border-white/40 transition-all duration-700 font-serif rounded-full group shadow-2xl"
           >
-            <span className="flex items-center gap-3">
-              I'm Ready to Begin
-              <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+            <span className="flex items-center gap-4">
+              Begin the Journey
+              <ArrowRight className="h-5 w-5 group-hover:translate-x-2 transition-transform duration-500" />
             </span>
           </Button>
           
-          <p className="text-white/60 text-sm mt-6 font-serif">
-            Take your time. There's no rush on this journey.
+          <p className="text-white/50 text-sm mt-8 font-serif italic">
+            There is no hurry. Take all the time you need.
           </p>
         </div>
       </div>
