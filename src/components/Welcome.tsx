@@ -1,20 +1,20 @@
 
 import React from 'react';
+import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const Welcome = () => {
   const navigate = useNavigate();
 
   const handleBeginJourney = () => {
+    // Navigate to intake questions page (to be created later)
     console.log('Beginning journey - navigating to intake questions');
     // navigate('/intake');
   };
 
   return (
-    <div 
-      className="min-h-screen relative overflow-hidden flex items-center justify-center cursor-pointer"
-      onClick={handleBeginJourney}
-    >
+    <div className="min-h-screen relative overflow-hidden flex items-center justify-center">
       {/* Video Background */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-[-1]">
         <video 
@@ -31,37 +31,39 @@ const Welcome = () => {
           />
           Your browser does not support the video tag.
         </video>
-        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="absolute inset-0 bg-black/10"></div>
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 w-full max-w-5xl px-8 text-center">
-        {/* Welcome Text */}
+      <div className="relative z-10 w-full max-w-5xl px-6 text-center">
+        {/* Welcome Header - Immediate appearance with emergence effect */}
         <div className="mb-20">
-          <h1 className="font-sans text-7xl md:text-8xl lg:text-9xl font-light text-white tracking-[0.05em] mb-8 leading-none uppercase">
+          <h1 className="font-serif text-8xl md:text-9xl lg:text-[12rem] font-light text-white tracking-wider mb-8 animate-[fade-in_3s_ease-out_forwards] drop-shadow-2xl">
             Welcome
           </h1>
-          <p className="text-white/80 text-xl md:text-2xl font-light tracking-[0.05em] font-sans mb-16 uppercase">
-            to your journey within
+          <p className="text-white/95 text-3xl md:text-4xl font-light font-serif tracking-wide animate-[fade-in_2s_ease-out_1s_forwards] opacity-0">
+            to your journey of self-discovery
           </p>
         </div>
 
-        {/* Call to Action */}
-        <div className="opacity-0 animate-[fade-in_1.5s_ease-out_2s_forwards]">
-          <p className="text-white/90 text-lg md:text-xl leading-relaxed font-sans font-light mb-12 max-w-2xl mx-auto tracking-normal">
-            When you're ready, we'll begin exploring the depths of your inner world together.
+        {/* Simple Message */}
+        <div className="opacity-0 animate-[fade-in_2s_ease-out_2s_forwards]">
+          <p className="text-white/90 text-2xl md:text-3xl leading-relaxed font-serif mb-16">
+            Are you ready to explore what lies within?
           </p>
           
-          <p className="text-white text-xl font-light font-sans mb-8 tracking-normal uppercase">
-            Begin the Journey
-          </p>
+          <Button
+            onClick={handleBeginJourney}
+            className="bg-white/15 hover:bg-white/25 text-white px-14 py-6 text-xl font-light backdrop-blur-md border border-white/20 hover:border-white/40 transition-all duration-700 font-serif rounded-full group shadow-2xl"
+          >
+            <span className="flex items-center gap-4">
+              I'm Ready to Begin
+              <ArrowRight className="h-6 w-6 group-hover:translate-x-2 transition-transform duration-500" />
+            </span>
+          </Button>
           
-          <p className="text-white/50 text-sm font-sans font-light tracking-normal">
-            There is no hurry. Take all the time you need.
-          </p>
-          
-          <p className="text-white/40 text-xs mt-6 font-sans font-light tracking-normal">
-            Click anywhere to continue
+          <p className="text-white/50 text-lg mt-8 font-serif font-light">
+            Take your time. There's no rush on this journey.
           </p>
         </div>
       </div>
