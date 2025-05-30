@@ -8,15 +8,15 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const [rememberMe, setRememberMe] = useState(false);
+  const [agreeToTerms, setAgreeToTerms] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Login attempt:', { email, password, rememberMe });
-    // Add login logic here
+    console.log('Sign up attempt:', { email, password, agreeToTerms });
+    // Add signup logic here
   };
 
   return (
@@ -61,14 +61,14 @@ const Login = () => {
               INCLUYA
             </h1>
             <h2 className="text-xl font-light text-white/90 mb-2 opacity-0 animate-[fade-in_1.2s_ease-out_0.6s_forwards]">
-              Welcome back
+              Join us today
             </h2>
             <p className="text-white/70 text-sm opacity-0 animate-[fade-in_1.2s_ease-out_0.9s_forwards]">
-              Please sign in to your account
+              Create your new account to get started
             </p>
           </div>
 
-          {/* Social Login Buttons */}
+          {/* Social Signup Buttons */}
           <div className="space-y-3 mb-6 opacity-0 animate-[fade-in_1.2s_ease-out_1.2s_forwards]">
             <Button
               variant="outline"
@@ -102,11 +102,11 @@ const Login = () => {
               <div className="w-full border-t border-white/30"></div>
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-3 bg-transparent text-white/70">Or continue with email</span>
+              <span className="px-3 bg-transparent text-white/70">Or sign up with email</span>
             </div>
           </div>
 
-          {/* Login Form */}
+          {/* Signup Form */}
           <form onSubmit={handleSubmit} className="space-y-4 opacity-0 animate-[fade-in_1.2s_ease-out_1.8s_forwards]">
             <div className="space-y-2">
               <label htmlFor="email" className="block text-sm font-medium text-white/90">
@@ -133,7 +133,7 @@ const Login = () => {
                   type={showPassword ? "text" : "password"}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  placeholder="Enter your password"
+                  placeholder="Create your password"
                   className="w-full pr-10 bg-white/10 border-white/30 text-white placeholder:text-white/50 focus:border-white/50 focus:ring-white/30 backdrop-blur-sm"
                   required
                 />
@@ -147,59 +147,52 @@ const Login = () => {
               </div>
             </div>
 
-            {/* Remember Me & Forgot Password */}
-            <div className="flex items-center justify-between py-2">
-              <div className="flex items-center space-x-2">
-                <Checkbox
-                  id="remember"
-                  checked={rememberMe}
-                  onCheckedChange={(checked) => setRememberMe(checked as boolean)}
-                  className="border-white/30 data-[state=checked]:bg-white/20 data-[state=checked]:border-white/50"
-                />
-                <label htmlFor="remember" className="text-sm text-white/80">
-                  Remember me
-                </label>
-              </div>
-              <Link
-                to="/forgot-password"
-                className="text-sm font-medium text-white/80 hover:text-white underline-offset-2 hover:underline"
-              >
-                Forgot password?
-              </Link>
+            {/* Terms Agreement */}
+            <div className="flex items-center space-x-2 py-2">
+              <Checkbox
+                id="terms"
+                checked={agreeToTerms}
+                onCheckedChange={(checked) => setAgreeToTerms(checked as boolean)}
+                className="border-white/30 data-[state=checked]:bg-white/20 data-[state=checked]:border-white/50"
+              />
+              <label htmlFor="terms" className="text-sm text-white/80">
+                I agree to the{" "}
+                <Link to="/terms" className="underline hover:text-white">
+                  Terms of Service
+                </Link>{" "}
+                and{" "}
+                <Link to="/privacy" className="underline hover:text-white">
+                  Privacy Policy
+                </Link>
+              </label>
             </div>
 
             <Button
               type="submit"
-              className="w-full bg-white/20 hover:bg-white/30 text-white py-3 font-medium backdrop-blur-sm border border-white/30 hover:border-white/50 transition-all duration-300"
+              disabled={!agreeToTerms}
+              className="w-full bg-white/20 hover:bg-white/30 text-white py-3 font-medium backdrop-blur-sm border border-white/30 hover:border-white/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Sign In
+              Create Account
             </Button>
           </form>
 
-          {/* Sign Up Link */}
+          {/* Already have account Link */}
           <div className="text-center mt-6 opacity-0 animate-[fade-in_1.2s_ease-out_2.1s_forwards]">
             <p className="text-sm text-white/70">
-              Don't have an account?{" "}
+              Already have an account?{" "}
               <Link
-                to="/signup"
+                to="/signin"
                 className="font-medium text-white hover:text-white/80 underline-offset-2 hover:underline"
               >
-                Sign up for free
+                Sign in here
               </Link>
             </p>
           </div>
 
-          {/* Terms and Privacy */}
+          {/* Welcome Message */}
           <div className="text-center mt-4 opacity-0 animate-[fade-in_1.2s_ease-out_2.4s_forwards]">
             <p className="text-xs text-white/60">
-              By signing in, you agree to our{" "}
-              <Link to="/terms" className="underline hover:text-white/80">
-                Terms of Service
-              </Link>{" "}
-              and{" "}
-              <Link to="/privacy" className="underline hover:text-white/80">
-                Privacy Policy
-              </Link>
+              Welcome to Incluya! We're excited to have you join our community.
             </p>
           </div>
         </div>
