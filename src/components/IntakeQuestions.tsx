@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
@@ -177,31 +176,29 @@ const IntakeQuestions = () => {
         {/* Question Content */}
         <div className={`transition-all duration-500 ease-in-out ${isTransitioning ? 'opacity-0 transform translate-y-8' : 'opacity-100 transform translate-y-0'}`}>
           <div className="space-y-16">
-            {/* Question Card */}
-            <div className={`glass-panel p-8 md:p-12 bg-gradient-to-br ${currentQ.gradient || 'from-white/10 to-white/5'} border border-white/20 shadow-2xl`}>
-              <div className="text-center space-y-8">
-                {/* Icon for textarea questions */}
-                {currentQ.icon && (
-                  <div className="flex justify-center">
-                    <div className="p-4 rounded-full bg-incluya-yellow/20 backdrop-blur-sm">
-                      <currentQ.icon className="w-8 h-8 text-incluya-yellow" />
-                    </div>
+            {/* Question Header */}
+            <div className="text-center space-y-8">
+              {/* Icon for textarea questions */}
+              {currentQ.icon && (
+                <div className="flex justify-center">
+                  <div className="p-4 rounded-full bg-incluya-yellow/20 backdrop-blur-sm">
+                    <currentQ.icon className="w-8 h-8 text-incluya-yellow" />
                   </div>
-                )}
-                
-                {/* Question Title */}
-                <h2 className="font-sans text-2xl md:text-3xl lg:text-4xl font-light text-white leading-relaxed">
-                  {currentQ.question}
-                </h2>
-                
-                {currentQ.subtext && (
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                    <p className="text-white/90 text-lg font-sans">
-                      {currentQ.subtext}
-                    </p>
-                  </div>
-                )}
-              </div>
+                </div>
+              )}
+              
+              {/* Question Title */}
+              <h2 className="font-sans text-2xl md:text-3xl lg:text-4xl font-light text-white leading-relaxed drop-shadow-lg">
+                {currentQ.question}
+              </h2>
+              
+              {currentQ.subtext && (
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 inline-block">
+                  <p className="text-white/90 text-lg font-sans">
+                    {currentQ.subtext}
+                  </p>
+                </div>
+              )}
             </div>
 
             {/* Answer Section */}
@@ -220,13 +217,13 @@ const IntakeQuestions = () => {
               ) : (
                 <div className="space-y-12">
                   {currentQ.subQuestions?.map((subQuestion, index) => (
-                    <div key={index} className="glass-panel p-6 bg-white/5 border border-white/20 hover:bg-white/10 transition-all duration-300">
-                      <div className="space-y-6">
-                        <div className="flex items-start space-x-4">
-                          <div className="flex-shrink-0 w-8 h-8 rounded-full bg-incluya-yellow/20 flex items-center justify-center">
+                    <div key={index} className="space-y-6">
+                      <div className="text-center space-y-6">
+                        <div className="flex items-start justify-center space-x-4 max-w-4xl mx-auto">
+                          <div className="flex-shrink-0 w-8 h-8 rounded-full bg-incluya-yellow/20 backdrop-blur-sm flex items-center justify-center">
                             <span className="text-incluya-yellow font-semibold text-sm">{index + 1}</span>
                           </div>
-                          <p className="text-white/95 text-lg md:text-xl font-sans leading-relaxed flex-1">
+                          <p className="text-white text-lg md:text-xl font-sans leading-relaxed flex-1 drop-shadow-md">
                             {subQuestion}
                           </p>
                         </div>
@@ -234,10 +231,10 @@ const IntakeQuestions = () => {
                         <RadioGroup
                           value={answers[`${currentQ.id}_${index}`] || ''}
                           onValueChange={(value) => handleAnswerChange(currentQ.id, value, index)}
-                          className="flex space-x-4 justify-center"
+                          className="flex space-x-6 justify-center"
                         >
                           {[1, 2, 3, 4, 5].map((num) => (
-                            <div key={num} className="flex flex-col items-center space-y-2 group">
+                            <div key={num} className="flex flex-col items-center space-y-3 group">
                               <RadioGroupItem 
                                 value={num.toString()} 
                                 id={`${currentQ.id}_${index}_${num}`}
@@ -245,7 +242,7 @@ const IntakeQuestions = () => {
                               />
                               <Label 
                                 htmlFor={`${currentQ.id}_${index}_${num}`}
-                                className="text-white/70 font-sans cursor-pointer hover:text-incluya-yellow transition-colors text-lg group-hover:scale-110 transition-transform duration-200"
+                                className="text-white/80 font-sans cursor-pointer hover:text-incluya-yellow transition-colors text-lg group-hover:scale-110 transition-transform duration-200 drop-shadow-sm"
                               >
                                 {num}
                               </Label>
