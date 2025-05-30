@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -45,7 +44,7 @@ const Login = () => {
         <Button
           variant="ghost"
           onClick={() => navigate('/')}
-          className="flex items-center gap-2 text-white/80 hover:text-white hover:bg-white/10 backdrop-blur-sm"
+          className="flex items-center gap-2 text-white/80 hover:text-white hover:bg-white/10 backdrop-blur-sm font-serif"
         >
           <ArrowLeft size={16} />
           Back to Home
@@ -57,14 +56,14 @@ const Login = () => {
         <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 shadow-2xl">
           {/* Header */}
           <div className="text-center mb-8">
-            <h1 className="font-sans text-4xl font-light text-white mb-6 opacity-0 animate-[fade-in_1.5s_ease-out_0.3s_forwards] tracking-wide">
+            <h1 className="font-serif text-4xl font-light text-white mb-6 opacity-0 animate-[fade-in_1.5s_ease-out_0.3s_forwards] tracking-wide">
               Incluya
             </h1>
             <div className="space-y-3 opacity-0 animate-[fade-in_1.2s_ease-out_0.6s_forwards]">
-              <h2 className="text-xl font-light text-white/90">
+              <h2 className="text-xl font-light text-white/90 font-serif">
                 Welcome to your journey
               </h2>
-              <p className="text-white/80 text-sm leading-relaxed">
+              <p className="text-white/80 text-sm leading-relaxed font-serif">
                 Take a gentle step towards self-discovery and growth. 
                 Create your account and begin exploring a space designed 
                 for mindful reflection and personal development.
@@ -76,7 +75,7 @@ const Login = () => {
           <div className="space-y-3 mb-6 opacity-0 animate-[fade-in_1.2s_ease-out_1.2s_forwards]">
             <Button
               variant="outline"
-              className="w-full flex items-center justify-center gap-3 py-3 bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm"
+              className="w-full flex items-center justify-center gap-3 py-3 bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm font-serif"
               type="button"
             >
               <svg className="w-5 h-5" viewBox="0 0 24 24">
@@ -90,7 +89,7 @@ const Login = () => {
             
             <Button
               variant="outline"
-              className="w-full flex items-center justify-center gap-3 py-3 bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm"
+              className="w-full flex items-center justify-center gap-3 py-3 bg-white/10 border-white/30 text-white hover:bg-white/20 backdrop-blur-sm font-serif"
               type="button"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -106,14 +105,14 @@ const Login = () => {
               <div className="w-full border-t border-white/30"></div>
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-3 bg-transparent text-white/70">Or continue with email</span>
+              <span className="px-3 bg-transparent text-white/70 font-serif">Or continue with email</span>
             </div>
           </div>
 
           {/* Signup Form */}
           <form onSubmit={handleSubmit} className="space-y-4 opacity-0 animate-[fade-in_1.2s_ease-out_1.8s_forwards]">
             <div className="space-y-2">
-              <label htmlFor="email" className="block text-sm font-medium text-white/90">
+              <label htmlFor="email" className="block text-sm font-medium text-white/90 font-serif">
                 Email address
               </label>
               <Input
@@ -122,13 +121,13 @@ const Login = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="w-full bg-white/10 border-white/30 text-white placeholder:text-white/50 focus:border-white/50 focus:ring-white/30 backdrop-blur-sm"
+                className="w-full bg-white/10 border-white/30 text-white placeholder:text-white/50 focus:border-white/50 focus:ring-white/30 backdrop-blur-sm font-serif"
                 required
               />
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="password" className="block text-sm font-medium text-white/90">
+              <label htmlFor="password" className="block text-sm font-medium text-white/90 font-serif">
                 Password
               </label>
               <div className="relative">
@@ -138,7 +137,7 @@ const Login = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Create your password"
-                  className="w-full pr-10 bg-white/10 border-white/30 text-white placeholder:text-white/50 focus:border-white/50 focus:ring-white/30 backdrop-blur-sm"
+                  className="w-full pr-10 bg-white/10 border-white/30 text-white placeholder:text-white/50 focus:border-white/50 focus:ring-white/30 backdrop-blur-sm font-serif"
                   required
                 />
                 <button
@@ -159,7 +158,7 @@ const Login = () => {
                 onCheckedChange={(checked) => setAgreeToTerms(checked as boolean)}
                 className="border-white/30 data-[state=checked]:bg-white/20 data-[state=checked]:border-white/50"
               />
-              <label htmlFor="terms" className="text-sm text-white/80">
+              <label htmlFor="terms" className="text-sm text-white/80 font-serif">
                 I agree to the{" "}
                 <Link to="/terms" className="underline hover:text-white">
                   Terms of Service
@@ -174,7 +173,7 @@ const Login = () => {
             <Button
               type="submit"
               disabled={!agreeToTerms}
-              className="w-full bg-white/20 hover:bg-white/30 text-white py-3 font-medium backdrop-blur-sm border border-white/30 hover:border-white/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-white/20 hover:bg-white/30 text-white py-3 font-medium backdrop-blur-sm border border-white/30 hover:border-white/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed font-serif"
             >
               Begin Your Journey
             </Button>
@@ -182,7 +181,7 @@ const Login = () => {
 
           {/* Already have account Link */}
           <div className="text-center mt-6 opacity-0 animate-[fade-in_1.2s_ease-out_2.1s_forwards]">
-            <p className="text-sm text-white/70">
+            <p className="text-sm text-white/70 font-serif">
               Already part of our community?{" "}
               <Link
                 to="/signin"
@@ -195,7 +194,7 @@ const Login = () => {
 
           {/* Welcome Message */}
           <div className="text-center mt-4 opacity-0 animate-[fade-in_1.2s_ease-out_2.4s_forwards]">
-            <p className="text-xs text-white/60 leading-relaxed">
+            <p className="text-xs text-white/60 leading-relaxed font-serif">
               Every journey begins with a single step. We're honored to be part of yours.
             </p>
           </div>
