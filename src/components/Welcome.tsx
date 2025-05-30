@@ -42,9 +42,9 @@ const Welcome = () => {
             Welcome
           </h1>
           
-          {/* Short Message */}
-          <p className="text-white/90 text-2xl sm:text-3xl md:text-4xl font-light tracking-[0.03em] font-sans mb-16 uppercase opacity-0 animate-[fade-in_1.5s_ease-out_1.5s_forwards]">
-            Begin your journey within
+          {/* Main Message */}
+          <p className="text-white/90 text-lg sm:text-xl md:text-2xl font-serif leading-relaxed mb-16 opacity-0 animate-[fade-in_1.5s_ease-out_1.5s_forwards] px-4 sm:px-8 drop-shadow-md">
+            When you're ready, we'll begin exploring the depths of your inner world together.
           </p>
         </div>
 
