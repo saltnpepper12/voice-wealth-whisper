@@ -1,5 +1,4 @@
 
-
 import React, { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -22,9 +21,9 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden flex items-start justify-center pt-16 sm:pt-20" style={{ minHeight: '100vh', minHeight: '100dvh' }}>
+    <div className="min-h-screen relative overflow-hidden flex items-start justify-center pt-16 sm:pt-20" style={{ minHeight: '100dvh' }}>
       {/* Video Background - Extended to cover full screen including status bar */}
-      <div className="fixed top-0 left-0 w-full h-full overflow-hidden z-[-1]" style={{ height: '100vh', height: '100dvh', top: '0', left: '0' }}>
+      <div className="fixed top-0 left-0 w-full h-full overflow-hidden z-[-1]" style={{ height: '100dvh', top: '0', left: '0' }}>
         <video 
           autoPlay
           loop
@@ -32,7 +31,7 @@ const Login = () => {
           playsInline
           preload="auto"
           className="absolute w-full h-full object-cover"
-          style={{ width: '100vw', height: '100vh', height: '100dvh', objectFit: 'cover' }}
+          style={{ width: '100vw', height: '100dvh', objectFit: 'cover' }}
         >
           <source 
             src="https://raw.githubusercontent.com/saltnpepper12/videos/main/Login.mp4" 
@@ -190,4 +189,3 @@ const Login = () => {
 };
 
 export default Login;
-
